@@ -1,7 +1,7 @@
-# 🎁 
+# 프레젠톡 🎁 
 
-는 사용자에게 맞춤형 선물을 추천하는 스마트 선물 추천 플랫폼입니다.
- is a smart gift recommendation platform that provides personalized gift suggestions for your loved ones.
+프레젠톡은 사용자에게 맞춤형 선물을 추천하는 스마트 선물 추천 플랫폼입니다.
+PresenTalk is a smart gift recommendation platform that provides personalized gift suggestions for your loved ones.
 
 💡 **쉽고 직관적인 인터페이스로 친구나 가족을 위한 완벽한 선물을 찾아보세요!**
 💡 **Find the perfect gift for your friends or family with an easy and intuitive interface!**
@@ -44,8 +44,8 @@
 - **취향 파악의 어려움**: 상대방의 관심사와 필요를 이해하기 어려움.
 
 ### 💡 해결책 | Solution
-는 간단한 질문과 업로드된 데이터를 통해 상대방의 취향을 분석하고, 가장 적합한 선물을 추천합니다.  
- analyzes preferences through simple questions and uploaded data to suggest the perfect gift.
+프레젠톡  는 간단한 질문과 업로드된 데이터를 통해 상대방의 취향을 분석하고, 가장 적합한 선물을 추천합니다.  
+PresenTalk analyzes preferences through simple questions and uploaded data to suggest the perfect gift.
 
 ---
 
@@ -54,20 +54,18 @@
 ### 📝 정보 입력 | Information Input
 1. **취향 정보 입력**: 성별, 관계, 테마(생일, 기념일 등) 등 간단한 정보 제공.
    *Provide basic information such as gender, relationship, and theme (birthday, anniversary, etc.).*
-2. **사진 및 대화 업로드**: 카카오톡 대화로 취향 분석.
+2. **대화 업로드**: 카카오톡 대화로 취향 분석.
    *Upload KakaoTalk chats for preference analysis.*
 
 ### 📊 분석 및 추천 | Analysis and Recommendation
-- AI와 사진 분석 기술을 활용해 취향과 관심사 추출.
-  *Extract preferences and interests using AI and image analysis.*
-- 사용자 맞춤 선물 추천.
+- AI를 활용해 취향과 관심사 추출.
+  *Extract preferences and interests using AI.*
+- 받는 사람 맞 선물 추천.
   *Recommend personalized gifts.*
 
 ### 🎁 결과 제공 | Results
 - **선물 리스트**: 상품 이미지, 설명, 구매 링크와 함께 제공.  
   *Display gift lists with images, descriptions, and purchase links.*
-- **이벤트 제안**: 친구와의 특별한 경험을 위한 이벤트 아이디어 제공.
-  *Offer event ideas for memorable experiences with friends.*
 
 ---
 
@@ -75,7 +73,7 @@
 
 - **Frontend**: React
 - **Backend**: SpringBoot, MySQL
-- **AI 분석**: GPT, Amazon Comprehend 
+- **AI 분석**: GPT API, Amazon Comprehend 
 - **Deployment**: AWS EC2, S3, RDS
 - **API 연동**: 쿠팡 API, 네이버 쇼핑 API
 
@@ -97,10 +95,3 @@
 *For inquiries about the project, please contact:*
 
 📧 **andrewkimswe@gmail.com**
-
----
-
-## 추가 예정 | To Be Updated
-- **팀원 기여 목록**: 각 팀원의 역할과 기여를 명시.  
-- **데모 영상 및 스크린샷**: 앱 사용 방법을 GIF 또는 이미지로 제공.  
-- **사용자 가이드**: 앱의 주요 기능을 설명하는 튜토리얼.
