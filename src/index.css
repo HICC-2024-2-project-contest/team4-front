@@ -26,6 +26,11 @@ body {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "NotoSansKR";
+  src: url("/NotoSansKR-Regular.ttf");
+}
+
 body * {
   font-family: "Pretendard";
 }

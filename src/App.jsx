@@ -1,9 +1,12 @@
 import "./App.css";
-
+import Header from "./components/common/Header";
 function App() {
   return (
     <div className="AppContainer">
-      <div className="App">presenTalk</div>
+      <div className="App">
+        <Header />
+        PresenTalk
+      </div>
     </div>
   );
 }
