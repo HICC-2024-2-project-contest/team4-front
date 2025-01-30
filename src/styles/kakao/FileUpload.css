@@ -1,0 +1,20 @@
+.FileUpload h6 {
+  width: 58px;
+  height: 20px;
+  text-decoration-line: none;
+}
+
+.FileUpload p {
+  width: 183px;
+  height: 15px;
+}
+
+.FileUpload input:checked::after {
+  content: url("../../assets/img_kakao/arrow.svg");
+  position: absolute;
+  width: 20px;
+  height: 29px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

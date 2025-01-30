@@ -1,0 +1,105 @@
+.SpeechBubble {
+  margin: 0 auto;
+  width: 300px;
+  height: 230px;
+  position: relative;
+  top: 140px;
+}
+
+.SpeechBubble .bubble {
+  position: relative;
+  margin: 12px 0;
+  background: #919191;
+  height: 43px;
+  font-size: 12px;
+  line-height: 134%;
+  /* identical to box height, or 16px */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  border-radius: 20px;
+}
+
+.SpeechBubble .bubble:after {
+  content: "";
+  position: absolute;
+  top: 77%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom: 0;
+  margin-top: -10px;
+}
+
+.SpeechBubble .bubble1 {
+  width: 250px;
+}
+
+.SpeechBubble .bubble1:after {
+  left: 7%;
+  border-right-color: #919191;
+  border-left: 0;
+  margin-left: -20px;
+}
+
+.SpeechBubble .bubble2 {
+  width: 253px;
+  margin-left: 40px;
+}
+
+.SpeechBubble .bubble2:after {
+  right: 7%;
+  border-left-color: #919191;
+  border-right: 0;
+  margin-right: -20px;
+}
+
+.SpeechBubble .bubble3 {
+  width: 121px;
+  margin-left: 40px;
+}
+
+.SpeechBubble .bubble3:after {
+  left: 15%;
+  border-right-color: #919191;
+  border-left: 0;
+  margin-left: -20px;
+}
+
+.SpeechBubble .bubble4 {
+  width: 183px;
+  background: #343434;
+  font-weight: 700;
+  margin-left: 100px;
+}
+
+.SpeechBubble .bubble4:after {
+  right: 10%;
+  border-left-color: #343434;
+  border-right: 0;
+  margin-right: -20px;
+}
+
+/* 움직이는 애니메이션 */
+@keyframes bubble-ani {
+  0% {
+    transform: rotate(0deg); /* 시작은 정자세 */
+  }
+  25% {
+    transform: rotate(-2deg); /* 왼쪽으로 50도 회전 */
+  }
+  50% {
+    transform: rotate(0deg); /* 다시 정자세로 돌아옴 */
+  }
+  75% {
+    transform: rotate(2deg); /* 오른쪽으로 50도 회전 */
+  }
+  100% {
+    transform: rotate(0deg); /* 다시 정자세로 돌아옴 */
+  }
+}
+.bubble4 {
+  animation: bubble-ani 1s linear infinite; /* 애니메이션 적용 */
+}
