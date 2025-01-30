@@ -35,10 +35,11 @@
 
 .SpeechBubble .bubble1 {
   width: 250px;
+  border-bottom-left-radius: 0;
 }
 
 .SpeechBubble .bubble1:after {
-  left: 7%;
+  left: 3%;
   border-right-color: #919191;
   border-left: 0;
   margin-left: -20px;
@@ -47,10 +48,11 @@
 .SpeechBubble .bubble2 {
   width: 253px;
   margin-left: 40px;
+  border-bottom-right-radius: 0;
 }
 
 .SpeechBubble .bubble2:after {
-  right: 7%;
+  right: 3%;
   border-left-color: #919191;
   border-right: 0;
   margin-right: -20px;
@@ -59,10 +61,11 @@
 .SpeechBubble .bubble3 {
   width: 121px;
   margin-left: 40px;
+  border-bottom-left-radius: 0;
 }
 
 .SpeechBubble .bubble3:after {
-  left: 15%;
+  left: 5%;
   border-right-color: #919191;
   border-left: 0;
   margin-left: -20px;
@@ -73,10 +76,11 @@
   background: #343434;
   font-weight: 700;
   margin-left: 100px;
+  border-bottom-right-radius: 0;
 }
 
 .SpeechBubble .bubble4:after {
-  right: 10%;
+  right: 5%;
   border-left-color: #343434;
   border-right: 0;
   margin-right: -20px;
