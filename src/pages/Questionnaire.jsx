@@ -28,7 +28,7 @@ const Questionnaire = () => {
       <div className="SelectionGroup">
         <h2 className="Subtitle">관계</h2>
         <div className="ButtonGroup">
-          {["부모님", "애인", "친구", "직장동료", "썸", "기타"].map(item => (
+          {["부모님", "애인", "친구"].map(item => (
             <button key={item} className={`SelectionButton ${relationship === item ? "selected" : ""}`}
                     onClick={() => setRelationship(item)}>
               {item}
@@ -37,9 +37,8 @@ const Questionnaire = () => {
         </div>
       </div>
 
-      <button className="PrimaryButton" disabled={!gender || !relationship} onClick={() => alert(`성별: ${gender}, 관계: ${relationship}`)}>
-        다음
-      </button>
+      <Button text="다음" type="black" onClick={() => alert(`성별: ${gender}, 관계: ${relationship}`)} disabled={!gender || !relationship} />
+
     </div>
   );
 };
