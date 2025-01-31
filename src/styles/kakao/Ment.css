@@ -1,0 +1,20 @@
+.Ment h3 {
+  /* 상대와의 카카오톡 대화를 업로드해 보세요! */
+
+  width: 212px;
+  height: 56px;
+  position: relative;
+  top: 109px;
+
+  margin: 0 auto;
+  margin-top: 0px;
+
+  font-weight: 600;
+  font-size: 21.6797px;
+  line-height: 130%;
+  /* or 28px */
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #343434;
+}

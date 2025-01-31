@@ -1,0 +1,40 @@
+.FileUpload h6 {
+  width: 58px;
+  height: 20px;
+  text-decoration-line: none;
+}
+
+.FileUpload p {
+  width: 183px;
+  height: 15px;
+}
+
+.FileUpload input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+
+.FileUpload label {
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+  margin-top: 26px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.FileUpload .arrow-icon {
+  content: url("../../assets/img_kakao/arrow.svg");
+  position: absolute;
+  width: 20px;
+  height: 29px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
