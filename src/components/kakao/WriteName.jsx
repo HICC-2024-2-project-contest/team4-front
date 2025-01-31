@@ -18,7 +18,7 @@ const WriteName = () => {
         <p>마지막으로 상대방의 이름을 입력해주세요!</p>
         <Button
           text={"완료"}
-          type={"white"}
+          type={name.trim() !== "" ? "white" : "gray"}
           onClick={() => {
             if (name.trim() === "") {
               alert("이름을 입력해주세요!"); // 빈 값이면 경고창 띄우기
