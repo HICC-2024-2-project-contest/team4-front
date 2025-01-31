@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import Category from "./Category";
 import Card from "./Card";
+import Loading from "./Loading";
 import "../../styles/result/Inventory.css";
 import axios from "axios";
 
 const Inventory = () => {
   const [inventory, setInventory] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -18,6 +20,12 @@ const Inventory = () => {
         const uniqueCategories = [
           ...new Set(response.data.data.map((item) => item.category)),
         ];
+
+        // 기본 선택된 카테고리 설정
+        if (uniqueCategories.length > 0) {
+          setSelectedCategory(uniqueCategories[0]);
+        }
+
         setCategories(uniqueCategories);
         console.log("선물 리스트 받아오기 성공", response.data.data);
         setLoading(false);
@@ -29,25 +37,31 @@ const Inventory = () => {
     getInventory();
   }, []);
 
-  const onClick = () => {
-    return <div>click</div>;
-  };
+  // 선택된 카테고리에 해당하는 아이템 필터링
+  const filteredInventory = inventory.filter(
+    (item) => item.category === selectedCategory
+  );
 
   if (loading) {
-    return <div>로딩중...</div>;
+    return <Loading />;
   }
 
   return (
     <div className="Inventory">
       <div className="Inventory_category">
-        <Category text={categories[0]} type={"black"} onClick={onClick} />
-        <Category text={categories[1]} type={"gray"} onClick={onClick} />
-        <Category text={categories[2]} type={"gray"} onClick={onClick} />
+        {categories.map((category, index) => (
+          <Category
+            key={index}
+            text={category}
+            type={selectedCategory === category ? "black" : "gray"}
+            onClick={() => setSelectedCategory(category)}
+          />
+        ))}
       </div>
       <div className="Inventory_item">
-        <Card inventory={inventory[0]} />
-        <Card inventory={inventory[1]} />
-        <Card inventory={inventory[2]} />
+        {filteredInventory.map((item) => (
+          <Card key={item.id} inventory={item} />
+        ))}
       </div>
     </div>
   );
