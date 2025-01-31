@@ -1,0 +1,13 @@
+.Header {
+  position: absolute;
+  top: 0px;
+  text-align: center;
+  padding-top: 37px;
+  width: 360px;
+  height: 88px;
+}
+
+.Header img {
+  width: 78px;
+  height: 17.79px;
+}

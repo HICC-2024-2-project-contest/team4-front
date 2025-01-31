@@ -1,0 +1,25 @@
+.WriteName input {
+  align-items: flex-start;
+  padding: 15px;
+  width: 280px;
+  height: 48px;
+  background-color: #000000;
+  color: white;
+  border-radius: 0;
+  border: none;
+}
+
+.WriteName h6 {
+  /* 이름 입력 */
+  width: 47px;
+  height: 20px;
+  text-decoration: none;
+  margin-top: 32px;
+}
+
+.WriteName p {
+  /* 마지막으로 상대방의 이름을 입력해주세요! */
+
+  width: 162px;
+  height: 15px;
+}

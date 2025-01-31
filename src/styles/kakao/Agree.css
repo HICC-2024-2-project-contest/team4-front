@@ -1,0 +1,86 @@
+.blackBox {
+  background-color: #1d1d1d;
+  width: 360px;
+  height: 292px;
+  position: absolute;
+  bottom: 0px;
+  box-shadow: 0px 0px 2.89062px rgba(0, 0, 0, 0.25);
+  border-top-left-radius: 17.3438px;
+  border-top-right-radius: 17.3438px;
+}
+
+.blackBox input {
+  appearance: none; /* 기본 체크박스 스타일 제거 */
+  display: block;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+  margin-top: 26px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.Agree input:checked::after {
+  content: url("../../assets/img_kakao/check.svg");
+  position: absolute;
+  width: 32px;
+  height: 25px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.blackBox h6 {
+  /* 개인정보 수집 및 이용 동의 */
+
+  width: 133px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 150%;
+  /* identical to box height, or 20px */
+  letter-spacing: -0.02em;
+  text-decoration-line: underline;
+  color: #ffffff;
+}
+
+.blackBox h6 {
+  /* 개인정보 수집 및 이용 동의 */
+
+  width: 133px;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 150%;
+  /* identical to box height, or 20px */
+  letter-spacing: -0.02em;
+  text-decoration-line: underline;
+  color: #ffffff;
+}
+
+.blackBox p {
+  /* 약관 동의하고 파일 업로드 하기 */
+
+  width: 120px;
+  height: 15px;
+  margin: 0 auto;
+  margin-top: 9px;
+
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 150%;
+  /* identical to box height, or 15px */
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.blackBox .Button {
+  margin: 0 20px;
+  position: absolute;
+  bottom: 60px;
+}
