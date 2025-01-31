@@ -1,0 +1,59 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "구찌 홀스빗 1955 미니 크로스백 699296",
+      "link": "https://smartstore.naver.com/main/products/7945842158",
+      "price": 1698000,
+      "image": "https://shopping-phinf.pstatic.net/main_8549034/85490342481.1.jpg",
+      "mallName": "스토리아울렛",
+      "productId": "85490342481",
+      "brand": "구찌",
+      "category": "패션잡화"
+    },
+    {
+      "id": 2,
+      "title": "Gucci Interlocking G Pendant Necklace Silver",
+      "link": "https://kream.co.kr/products/61808?fetchRelated=true",
+      "price": 286000,
+      "image": "https://shopping-phinf.pstatic.net/main_8549034/85490342481.1.jpg",
+      "mallName": "KREAM",
+      "productId": null,
+      "brand": null,
+      "category": "패션잡화"
+    },
+    {
+      "id": 3,
+      "title": "어쩌구저쩌구 꽃 종류들....",
+      "link": "https://kream.co.kr/products/61808?fetchRelated=true",
+      "price": 286000,
+      "image": "https://shopping-phinf.pstatic.net/main_8549034/85490342481.1.jpg",
+      "mallName": "KREAM",
+      "productId": null,
+      "brand": null,
+      "category": "꽃"
+    },
+    {
+      "id": 4,
+      "title": "장미 복숭아 어쩌구저저꾸",
+      "link": "https://kream.co.kr/products/61808?fetchRelated=true",
+      "price": 286000,
+      "image": "https://kream-phinf.pstatic.net/MjAyNDA5MTBfMTY3/MDAxNzI1OTU4MzMwNzMz.pzH7G6LFO1C0I9voO8QY_lEplyPfbi708C2Rk1WVWuEg.CdArvqmuDMCvmNfpOIMkrvzAN7L_dneboD9NgpL7xnog.PNG/a_8506781e18b3470ba46a1c7d59975c15.png?type=m",
+      "mallName": "KREAM",
+      "productId": null,
+      "brand": null,
+      "category": "꽃"
+    },
+    {
+      "id": 5,
+      "title": "초코케이크 딸기케이크",
+      "link": "https://kream.co.kr/products/61808?fetchRelated=true",
+      "price": 286000,
+      "image": "https://kream-phinf.pstatic.net/MjAyNDA5MTBfMTY3/MDAxNzI1OTU4MzMwNzMz.pzH7G6LFO1C0I9voO8QY_lEplyPfbi708C2Rk1WVWuEg.CdArvqmuDMCvmNfpOIMkrvzAN7L_dneboD9NgpL7xnog.PNG/a_8506781e18b3470ba46a1c7d59975c15.png?type=m",
+      "mallName": "KREAM",
+      "productId": null,
+      "brand": null,
+      "category": "케이크"
+    }
+  ]
+}
