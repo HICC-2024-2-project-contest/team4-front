@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/common/Header";
-import Onboarding from "./components/common/pages/Onboarding";
-import Questionnaire from "./components/common/pages/Questionaire";
+import Onboarding from "./pages/Onboarding";
+import Questionnaire from "./pages/Questionaire";
 
 function App() {
   console.log("✅ App 컴포넌트 렌더링됨!");

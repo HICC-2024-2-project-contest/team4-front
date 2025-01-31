@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
-import Button from "../Button";
+import Button from "../components/common/Button";
 
 const Onboarding = () => {
   const navigate = useNavigate();
