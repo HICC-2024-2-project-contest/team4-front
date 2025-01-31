@@ -31,6 +31,16 @@ body {
   src: url("/NotoSansKR-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Ria Sans";
+  src: url("/RiaSans-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("/Roboto-VariableFont_wdth,wght.ttf");
+}
+
 body * {
   font-family: "Pretendard";
 }

@@ -1,0 +1,14 @@
+.Inventory .Inventory_category {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 140px;
+}
+
+.Inventory .Inventory_item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px;
+  justify-content: space-between;
+  gap: 12px 0;
+}
