@@ -30,7 +30,6 @@
 }
 
 .FileUpload .arrow-icon {
-  content: url("../../assets/img_kakao/arrow.svg");
   position: absolute;
   width: 20px;
   height: 29px;

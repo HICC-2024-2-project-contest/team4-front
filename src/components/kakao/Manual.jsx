@@ -3,7 +3,6 @@ import "../../styles/kakao/Manual.css";
 import chat1 from "../../assets/img_kakao/chat1.svg";
 import chat2 from "../../assets/img_kakao/chat2.svg";
 import chat3 from "../../assets/img_kakao/chat3.svg";
-import chat4_1 from "../../assets/img_kakao/chat4_1.svg";
 import chat4 from "../../assets/img_kakao/chat4.svg";
 
 const Manual = ({ closeHelp }) => {
@@ -56,10 +55,7 @@ const Manual = ({ closeHelp }) => {
               선택하면 파일이 다운로드 됩니다
             </h6>
           </div>
-          <div className="fourth_imgs">
-            <img src={chat4_1} alt="대화 내용 내보내기" />
-            <img src={chat4} alt="텍스트 메세지만 내보내기" />
-          </div>
+          <img src={chat4} alt="텍스트 메세지만 내보내기" />
         </div>
       </div>
     </div>

@@ -14,11 +14,11 @@ const Agree = () => {
           checked={checked}
           onChange={() => setChecked(!checked)}
         />
-        <h6>개인정보 수집 및 이용 동의</h6>
+        <h6 className="whiteMent">개인정보 수집 및 이용 동의</h6>
         <p>약관 동의하고 파일 업로드 하기</p>
         <Button
           text={"다음"}
-          type={"white"}
+          type={checked ? "white" : "gray"}
           onClick={() => {
             if (!checked) {
               alert("약관에 동의해야 진행할 수 있습니다!");

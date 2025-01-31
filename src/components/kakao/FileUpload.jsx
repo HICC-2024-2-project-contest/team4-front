@@ -29,13 +29,14 @@ const FileUpload = () => {
     <div className="blackBox">
       <div className="FileUpload">
         <input type="file" onChange={handleFilesChange} id="file-upload" />
-        <label htmlFor="file-upload"></label>
-        <img src={arrow} alt="Arrow Icon" className="arrow-icon" />
+        <label htmlFor="file-upload">
+          <img src={arrow} alt="Arrow Icon" className="arrow-icon" />
+        </label>
         <h6>파일 업로드</h6>
         <p>움직이는 대화 상자를 클릭해 도움을 받아보세요!</p>
         <Button
           text={"다음"}
-          type={"white"}
+          type={file !== null ? "white" : "gray"}
           onClick={handleUPload}
           disabled={file == null}
         />
