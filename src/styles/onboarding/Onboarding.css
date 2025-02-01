@@ -1,13 +1,36 @@
+/* Onboarding.css */
+
+/* Swiper 슬라이드 스타일 */
 .swiper-slide {
+    width: 360px !important;
+    max-width: 360px !important;
+    height: 451px !important;
+    background-color: #D9D9D9 !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    
-    position: absolute; /* 피그마 스타일 적용 */
-    width: 360px; /* 피그마 값 */
-    height: 451px; /* 피그마 값 */
-    left: 0px;
-    top: 95.39px; /* 피그마 값 */
-    
-    background: #D9D9D9 !important; /* 피그마 색상 적용 */
-}
+  }
+  
+  /* Swiper 래퍼 */
+  .swiper-wrapper {
+    width: 100% !important;
+    max-width: 360px !important;
+  }
+  
+  /* PageContainer */
+  .PageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* 시작 부분에 배치 */
+    height: 100vh;
+    padding-top: 88px;
+    gap: 20px; /* 요소들 사이 간격 조정 */
+  }
+  
+  /* 버튼 컨테이너 */
+  .ButtonContainer {
+    margin-top: 40px; /* 버튼 위쪽 여백 줄임 */
+    margin-bottom: 10px; /* 버튼 아래 여백도 조정 */
+  }
+  
