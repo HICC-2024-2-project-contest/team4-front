@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
+import Header from "../components/common/Header";
 
 const Questionnaire = () => {
   console.log("✅ Questionnaire 화면 렌더링됨!"); 
@@ -9,6 +10,7 @@ const Questionnaire = () => {
 
   return (
     <div className="PageContainer">
+      <Header />
       <h1 className="Title">상대방에 대해 알려주세요</h1>
       <p className="Description">
         선택하신 정보로 선물을 추천해드립니다.<br />

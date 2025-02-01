@@ -1,5 +1,5 @@
 .Header {
-  position: absolute;
+  position: fixed;
   top: 0px;
   text-align: center;
   padding-top: 37px;

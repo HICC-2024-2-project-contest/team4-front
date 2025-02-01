@@ -5,15 +5,17 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
+import Header from "../components/common/Header";
 
 const Onboarding = () => {
   const navigate = useNavigate();
   return (
     <div className="PageContainer">
+      <Header />
       <Swiper
         modules={[Pagination]}
         pagination={{ clickable: true }}
-        spaceBetween={10}
+        spaceBetween={0}
         slidesPerView={1}
       >
         <SwiperSlide><div className="swiper-slide">이미지 1</div></SwiperSlide>
