@@ -8,6 +8,7 @@ const Questionnaire = () => {
   console.log("✅ Questionnaire 화면 렌더링됨!"); 
   const [gender, setGender] = useState(null);
   const [relationship, setRelationship] = useState(null);
+  const navigate = useNavigate(); // ✅ 네비게이트 함수 추가
 
   return (
     <div className="PageContainer">
@@ -38,8 +39,13 @@ const Questionnaire = () => {
         </div>
       </div>
 
-      <Button text="다음" type="black" onClick={() => alert(`성별: ${gender}, 관계: ${relationship}`)} disabled={!gender || !relationship} />
-      
+      <div className="ButtonContainer">
+        <Button text="다음" type="black" onClick={() => { 
+          console.log("✅ 다음 버튼 클릭됨!"); 
+          navigate("/gift_theme_Selection");
+        }} />
+      </div>
+
       <div className="Footer"></div>
     </div>
   );
