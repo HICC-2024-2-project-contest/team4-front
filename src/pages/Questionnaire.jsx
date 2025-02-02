@@ -4,8 +4,8 @@ import "../styles/Questionnaire/Questionnaire.css";
 import Button from "../components/common/Button";
 import Header from "../components/common/Header";
 import { useUser } from "../components/contexts/UserContext";
-import MaleIcon from "../../assets/images/male_icon.svg";
-import FemaleIcon from "../../assets/images/female_icon.svg";
+import MaleIcon from "../components/icons/male_icon.svg";
+import FemaleIcon from "../components/icons/female_icon.svg";
 
 const Questionnaire = () => {
   console.log("✅ Questionnaire 화면 렌더링됨!"); 
@@ -47,12 +47,16 @@ const Questionnaire = () => {
         </div>
       </div>
 
-      <div className="ButtonContainer">
-        <Button text="다음" type="black" onClick={() => { 
-          console.log("✅ 다음 버튼 클릭됨!"); 
-          navigate("/gift_theme_Selection");
-        }} disabled={!userData.gender || !userData.relationship} />
-      </div>
+      <Button 
+        text="다음" 
+        type="black" 
+        onClick={() => { 
+        console.log("✅ 다음 버튼 클릭됨!"); 
+        navigate("/gift_theme_Selection");
+  }} 
+  disabled={!userData.gender || !userData.relationship} 
+/>
+
 
       <div className="Footer"></div>
     </div>

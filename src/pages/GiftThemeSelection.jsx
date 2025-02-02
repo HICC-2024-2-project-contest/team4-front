@@ -26,7 +26,7 @@ const GiftThemeSelection = () => {
         <div className="ButtonGroup">
           {["생일", "기념일", "집들이", "감사", "축하", "시즌별"].map(item => (
             <button key={item} className={`SelectionButton theme ${userData.theme === item ? "selected" : ""}`}
-                    onClick={() => setUserData(prev => ({ ...prev, relationship: item }))}>
+                    onClick={() => setUserData(prev => ({ ...prev, theme: item }))}>
               {item}
             </button>
           ))}
@@ -34,7 +34,7 @@ const GiftThemeSelection = () => {
       
       </div>
          <div className="ButtonContainer">
-         <Button text="시작하기" type="black" onClick={() => { 
+         <Button text="다음" type="black" onClick={() => { 
           console.log("✅ 다음 클릭됨!"); 
           navigate("/KakaoTalkAgree");
          }} />

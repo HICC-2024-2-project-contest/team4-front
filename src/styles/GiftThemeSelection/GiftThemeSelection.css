@@ -37,7 +37,7 @@
     border: none;
     background-color: #f0f0f0;
     color: #aaa;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: bold;
     border-radius: 10px;
     cursor: pointer;
@@ -45,6 +45,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    font-family: 'Ria Sans';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 134%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #FFFFFF;
   }
   
   /* 📌 선택된 버튼 스타일 */
@@ -55,7 +64,7 @@
 
   
   .Button {
-    justify-content: center ;
+    justify-content: center;
     margin-bottom: 25px;
   }
 
@@ -102,3 +111,27 @@
     text-overflow: ellipsis; /* 필요 시 말줄임표(...) 처리 */
     margin-bottom: 20px; /* 다음 요소와 간격 */
   }
+
+.LeftRibbon {
+position: absolute;
+width: 58.3px;
+height: 70.65px;
+left: 207.19px;
+top: 304.98px;
+
+background: #D9D9D9;
+transform: rotate(138.32deg);
+
+}
+
+.RightRibbon {
+position: absolute;
+width: 62.18px;
+height: 65.59px;
+left: 173.98px;
+top: 258.77px;
+
+background: #D9D9D9;
+
+}
+
