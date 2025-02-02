@@ -1,51 +1,37 @@
-/* 헤더와 겹치는 문제 해결 */
-.PageContainer {
-    width: 360px;
-    height: 740px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    position: relative;
-    padding-top: 60px;
-  }
+  .PageContainer {
+  width: 360px;
+  height: 740px; /* 강제 높이 지정 */
+  min-height: 740px; /* 최소 높이 설정 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 하단 여백 확보 */
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  position: relative;
+}
+
   
   /* 📌 선택 그룹 */
   .SelectionGroup {
     width: 100%;
-    max-width: 280px;
-    margin-bottom: 20px;
+    max-width: 264px;
+    max-height: 162px;
+    justify-content: center;
   }
   
-  /* 📌 버튼 그룹 */
   .ButtonGroup {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
   }
+
   
-  /* 📌 성별 버튼 */
-  .SelectionButton.gender {
-    width: 90px !important;
-    height: 110px !important;
-    border: none;
-    background-color: #f0f0f0;
-    color: #aaa;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* 📌 관계 버튼 */
-  .SelectionButton.relationship {
+  /* 📌 테마 버튼 */
+  .SelectionButton.theme {
+    flex-basis: 30%; /* 3개씩 맞추기 위해 30% 설정 */
     width: 78px !important;
     height: 78px !important;
     border: none;
@@ -67,10 +53,12 @@
     color: #fff !important;
   }
 
-  /* 다음 버튼 아래쪽 여백 조정 */
+  
   .Button {
-    margin-bottom: 25px; /* 푸터와 25px 간격 유지 */
+    justify-content: center ;
+    margin-bottom: 25px;
   }
+
   
   /* 푸터 스타일 */
   .Footer {
@@ -82,11 +70,11 @@
   }
   
 /* 타이틀 (상대방에 대해 알려주세요) */
-.Title {
+  .Title {
     position: relative;  /* 절대값 대신 상대값 */
     width: 215px;
     height: 29px;
-    margin: 20px auto 10px; /* 상단 여백 확보 */
+    margin: 80px auto 10px; /* 상단 여백 확보 */
     font-family: 'Pretendard';
     font-weight: 600;
     font-size: 22px;
@@ -94,6 +82,7 @@
     text-align: center;
     letter-spacing: -0.02em;
     color: #1D1D1D;
+    white-space: nowrap;
   }
   
   /* 설명 (선택하신 정보로 선물 추천) */

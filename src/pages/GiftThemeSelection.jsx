@@ -3,16 +3,17 @@ import { useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
 import Header from "../components/common/Header";
 import "../styles/GiftThemeSelection/GiftThemeSelection.css";
+import { useUser } from "../components/contexts/UserContext";
 
 const GiftThemeSelection = () => {
+  console.log("✅ Questionnaire 화면 렌더링됨!"); 
+  const { userData, setUserData } = useUser(); 
+
   const navigate = useNavigate(); // 페이지 이동을 위한 useNavigate
 
-  const handleNext = () => {
-    navigate("/KakaoTalkAgree"); // 원하는 경로로 이동 (실제 경로로 변경해야 함)
-  };
 
   return (
-    <div className="container">
+    <div className="Pagecontainer">
         <Header />
       <h1 className="Title">선물 테마를 선택해보세요!</h1>
       <p className="Description">
@@ -21,13 +22,15 @@ const GiftThemeSelection = () => {
         다른 목적으로 사용되지 않으며 제 3자에게 제공되지 않습니다.
       </p>
 
-      <div className="ButtonGrid">
-        <button className="ThemeButton">생일</button>
-        <button className="ThemeButton">기념일</button>
-        <button className="ThemeButton">집들이</button>
-        <button className="ThemeButton">감사</button>
-        <button className="ThemeButton">축하</button>
-        <button className="ThemeButton">시트벌</button>
+      <div className="SelectionGroup">
+        <div className="ButtonGroup">
+          {["생일", "기념일", "집들이", "감사", "축하", "시즌별"].map(item => (
+            <button key={item} className={`SelectionButton theme ${userData.theme === item ? "selected" : ""}`}
+                    onClick={() => setUserData(prev => ({ ...prev, relationship: item }))}>
+              {item}
+            </button>
+          ))}
+        </div>
       
       </div>
          <div className="ButtonContainer">

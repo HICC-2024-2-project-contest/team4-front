@@ -4,6 +4,8 @@ import "../styles/Questionnaire/Questionnaire.css";
 import Button from "../components/common/Button";
 import Header from "../components/common/Header";
 import { useUser } from "../components/contexts/UserContext";
+import MaleIcon from "../../assets/images/male_icon.svg";
+import FemaleIcon from "../../assets/images/female_icon.svg";
 
 const Questionnaire = () => {
   console.log("✅ Questionnaire 화면 렌더링됨!"); 
@@ -22,9 +24,15 @@ const Questionnaire = () => {
       <div className="SelectionGroup">
         <div className="ButtonGroup">
           <button className={`SelectionButton gender ${userData.gender === "남자" ? "selected" : ""}`}
-                  onClick={() => setUserData(prev => ({ ...prev, gender: "남자" }))}>남자</button>
+                  onClick={() => setUserData(prev => ({ ...prev, gender: "남자" }))}>
+                     <img src={MaleIcon} alt="남자 아이콘" width={92} height={92} />
+                     남자
+                     </button>
           <button className={`SelectionButton gender ${userData.gender === "여자" ? "selected" : ""}`}
-                  onClick={() => setUserData(prev => ({ ...prev, gender: "여자" }))}>여자</button>
+                  onClick={() => setUserData(prev => ({ ...prev, gender: "여자" }))}>
+                    <img src={FemaleIcon} alt="여자 아이콘" width={92} height={92} />
+                    여자
+                    </button>
         </div>
       </div>
 

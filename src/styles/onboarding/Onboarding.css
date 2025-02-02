@@ -9,6 +9,7 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+    margin-top: 95px !important;
   }
   
   /* Swiper 래퍼 */
@@ -25,9 +26,7 @@
     justify-content: flex-start; /* 시작 부분에 배치 */
     width: 360px;  /* 피그마 사이즈 적용 */
     height: 740px; /* 피그마 사이즈 적용 */
-    padding-top: 60px; /* 헤더와 슬라이드 사이 여백 조정 */
-    padding-top: 88px;
-    gap: 40px; /* 요소들 사이 간격 조정 */
+    gap: 20px; /* 요소들 사이 간격 조정 */
   }
   
   /* 버튼 컨테이너 */
