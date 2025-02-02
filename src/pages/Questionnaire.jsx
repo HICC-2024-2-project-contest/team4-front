@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/common/Button";
+import "../styles/Questionnaire/Questionnaire.css";
 import Header from "../components/common/Header";
 
 const Questionnaire = () => {
@@ -18,20 +19,18 @@ const Questionnaire = () => {
       </p>
       
       <div className="SelectionGroup">
-        <h2 className="Subtitle">성별</h2>
         <div className="ButtonGroup">
-          <button className={`SelectionButton ${gender === "남자" ? "selected" : ""}`}
+          <button className={`SelectionButton gender ${gender === "남자" ? "selected" : ""}`}
                   onClick={() => setGender("남자")}>남자</button>
-          <button className={`SelectionButton ${gender === "여자" ? "selected" : ""}`}
+          <button className={`SelectionButton gender ${gender === "여자" ? "selected" : ""}`}
                   onClick={() => setGender("여자")}>여자</button>
         </div>
       </div>
 
       <div className="SelectionGroup">
-        <h2 className="Subtitle">관계</h2>
         <div className="ButtonGroup">
           {["부모님", "애인", "친구"].map(item => (
-            <button key={item} className={`SelectionButton ${relationship === item ? "selected" : ""}`}
+            <button key={item} className={`SelectionButton relationship ${relationship === item ? "selected" : ""}`}
                     onClick={() => setRelationship(item)}>
               {item}
             </button>
@@ -40,7 +39,8 @@ const Questionnaire = () => {
       </div>
 
       <Button text="다음" type="black" onClick={() => alert(`성별: ${gender}, 관계: ${relationship}`)} disabled={!gender || !relationship} />
-
+      
+      <div className="Footer"></div>
     </div>
   );
 };

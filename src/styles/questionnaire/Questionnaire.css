@@ -1,0 +1,84 @@
+/* 헤더와 겹치는 문제 해결 */
+.PageContainer {
+    width: 360px;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    padding-top: 60px;
+  }
+  
+  /* 📌 선택 그룹 */
+  .SelectionGroup {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+  
+  /* 📌 버튼 그룹 */
+  .ButtonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* 📌 성별 버튼 */
+  .SelectionButton.gender {
+    width: 90px !important;
+    height: 110px !important;
+    border: none;
+    background-color: #f0f0f0;
+    color: #aaa;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 📌 관계 버튼 */
+  .SelectionButton.relationship {
+    width: 78px !important;
+    height: 78px !important;
+    border: none;
+    background-color: #f0f0f0;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 📌 선택된 버튼 스타일 */
+  .SelectionButton.selected {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+
+  /* 다음 버튼 아래쪽 여백 조정 */
+  .Button {
+    margin-bottom: 25px; /* 푸터와 25px 간격 유지 */
+  }
+  
+  /* 푸터 스타일 */
+  .Footer {
+    width: 360px;
+    height: 35px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  

@@ -12,18 +12,24 @@ const Onboarding = () => {
   return (
     <div className="PageContainer">
       <Header />
-      <Swiper
-        modules={[Pagination]}
-        pagination={{ clickable: true }}
-        spaceBetween={0}
-        slidesPerView={1}
-      >
-        <SwiperSlide><div className="swiper-slide">이미지 1</div></SwiperSlide>
-        <SwiperSlide><div className="swiper-slide">이미지 2</div></SwiperSlide>
-        <SwiperSlide><div className="swiper-slide">이미지 3</div></SwiperSlide>
-      </Swiper>
-
-      <Button text="시작하기" type="black" onClick={() => { console.log("✅ 시작하기 버튼 클릭됨!"); navigate("/questionnaire");}} />
+      <div className="Swiper">
+        <Swiper
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+          spaceBetween={0}
+          slidesPerView={1}
+        >
+          <SwiperSlide><div className="swiper-slide">이미지 1</div></SwiperSlide>
+          <SwiperSlide><div className="swiper-slide">이미지 2</div></SwiperSlide>
+          <SwiperSlide><div className="swiper-slide">이미지 3</div></SwiperSlide>
+        </Swiper>
+      </div>
+      <div className="ButtonContainer">
+        <Button text="시작하기" type="black" onClick={() => { 
+          console.log("✅ 시작하기 버튼 클릭됨!"); 
+          navigate("/questionnaire");
+        }} />
+      </div>
     </div>
   );
 };
