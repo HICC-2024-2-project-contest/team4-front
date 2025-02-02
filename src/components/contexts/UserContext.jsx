@@ -5,7 +5,8 @@ const UserContext = createContext();
 export const UserProvider = ({ children }) => {
   const [userData, setUserData] = useState({
     gender: null,
-    relationship: null
+    relationship: null,
+    theme: null
   });
 
   return (
