@@ -24,12 +24,16 @@ const Onboarding = () => {
           <SwiperSlide><div className="swiper-slide">이미지 3</div></SwiperSlide>
         </Swiper>
       </div>
+
       <div className="ButtonContainer">
         <Button text="시작하기" type="black" onClick={() => { 
           console.log("✅ 시작하기 버튼 클릭됨!"); 
           navigate("/questionnaire");
         }} />
       </div>
+
+      <div className="Footer"></div>
+      
     </div>
   );
 };

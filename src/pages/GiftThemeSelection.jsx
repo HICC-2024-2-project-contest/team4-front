@@ -8,7 +8,7 @@ const GiftThemeSelection = () => {
   const navigate = useNavigate(); // 페이지 이동을 위한 useNavigate
 
   const handleNext = () => {
-    navigate("/nextPage"); // 원하는 경로로 이동 (실제 경로로 변경해야 함)
+    navigate("/KakaoTalkAgree"); // 원하는 경로로 이동 (실제 경로로 변경해야 함)
   };
 
   return (
@@ -36,7 +36,7 @@ const GiftThemeSelection = () => {
           navigate("/KakaoTalkAgree");
          }} />
         </div>
-        
+
         <div className="Footer"></div>
     </div>
   );

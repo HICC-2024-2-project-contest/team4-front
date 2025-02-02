@@ -1,53 +1,115 @@
-.container {
+/* 헤더와 겹치는 문제 해결 */
+.PageContainer {
+    width: 360px;
+    height: 740px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    position: relative;
+    padding-top: 60px;
+  }
+  
+  /* 📌 선택 그룹 */
+  .SelectionGroup {
+    width: 100%;
+    max-width: 280px;
+    margin-bottom: 20px;
+  }
+  
+  /* 📌 버튼 그룹 */
+  .ButtonGroup {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  /* 📌 성별 버튼 */
+  .SelectionButton.gender {
+    width: 90px !important;
+    height: 110px !important;
+    border: none;
+    background-color: #f0f0f0;
+    color: #aaa;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
   }
   
-  .Title {
+  /* 📌 관계 버튼 */
+  .SelectionButton.relationship {
+    width: 78px !important;
+    height: 78px !important;
+    border: none;
+    background-color: #f0f0f0;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* 📌 선택된 버튼 스타일 */
+  .SelectionButton.selected {
+    background-color: #000 !important;
+    color: #fff !important;
+  }
+
+  /* 다음 버튼 아래쪽 여백 조정 */
+  .Button {
+    margin-bottom: 25px; /* 푸터와 25px 간격 유지 */
+  }
+  
+  /* 푸터 스타일 */
+  .Footer {
+    width: 360px;
+    height: 35px;
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+  }
+  
+/* 타이틀 (상대방에 대해 알려주세요) */
+.Title {
+    position: relative;  /* 절대값 대신 상대값 */
+    width: 215px;
+    height: 29px;
+    margin: 20px auto 10px; /* 상단 여백 확보 */
     font-family: 'Pretendard';
     font-weight: 600;
     font-size: 22px;
+    line-height: 29px;
     text-align: center;
-    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+    color: #1D1D1D;
   }
   
+  /* 설명 (선택하신 정보로 선물 추천) */
   .Description {
+    position: relative;  /* 절대값 대신 상대값 */
+    width: auto;
     font-family: 'Pretendard';
     font-weight: 500;
     font-size: 11px;
+    line-height: 15px;
     text-align: center;
-    margin-bottom: 20px;
-    white-space: nowrap;
+    letter-spacing: -0.02em;
+    color: #1D1D1D;
+    
+    white-space: nowrap; /* 한 줄로 유지 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 필요 시 말줄임표(...) 처리 */
+    margin-bottom: 20px; /* 다음 요소와 간격 */
   }
-  
-  .ButtonGrid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .ThemeButton {
-    width: 80px;
-    height: 40px;
-    background: #E0E0E0;
-    border-radius: 8px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  
-  .NextButton {
-    width: 200px;
-    height: 40px;
-    background: black;
-    color: white;
-    font-size: 16px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  

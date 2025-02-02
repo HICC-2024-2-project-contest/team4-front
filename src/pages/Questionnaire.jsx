@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/common/Button";
 import "../styles/Questionnaire/Questionnaire.css";
+import Button from "../components/common/Button";
 import Header from "../components/common/Header";
+import { useUser } from "../components/contexts/UserContext";
 
 const Questionnaire = () => {
   console.log("✅ Questionnaire 화면 렌더링됨!"); 
-  const [gender, setGender] = useState(null);
-  const [relationship, setRelationship] = useState(null);
+  const { userData, setUserData } = useUser(); 
   const navigate = useNavigate(); // ✅ 네비게이트 함수 추가
 
   return (
@@ -21,18 +21,18 @@ const Questionnaire = () => {
       
       <div className="SelectionGroup">
         <div className="ButtonGroup">
-          <button className={`SelectionButton gender ${gender === "남자" ? "selected" : ""}`}
-                  onClick={() => setGender("남자")}>남자</button>
-          <button className={`SelectionButton gender ${gender === "여자" ? "selected" : ""}`}
-                  onClick={() => setGender("여자")}>여자</button>
+          <button className={`SelectionButton gender ${userData.gender === "남자" ? "selected" : ""}`}
+                  onClick={() => setUserData(prev => ({ ...prev, gender: "남자" }))}>남자</button>
+          <button className={`SelectionButton gender ${userData.gender === "여자" ? "selected" : ""}`}
+                  onClick={() => setUserData(prev => ({ ...prev, gender: "여자" }))}>여자</button>
         </div>
       </div>
 
       <div className="SelectionGroup">
         <div className="ButtonGroup">
           {["부모님", "애인", "친구"].map(item => (
-            <button key={item} className={`SelectionButton relationship ${relationship === item ? "selected" : ""}`}
-                    onClick={() => setRelationship(item)}>
+            <button key={item} className={`SelectionButton relationship ${userData.relationship === item ? "selected" : ""}`}
+                    onClick={() => setUserData(prev => ({ ...prev, relationship: item }))}>
               {item}
             </button>
           ))}
@@ -43,7 +43,7 @@ const Questionnaire = () => {
         <Button text="다음" type="black" onClick={() => { 
           console.log("✅ 다음 버튼 클릭됨!"); 
           navigate("/gift_theme_Selection");
-        }} />
+        }} disabled={!userData.gender || !userData.relationship} />
       </div>
 
       <div className="Footer"></div>
