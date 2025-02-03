@@ -1,7 +1,7 @@
 import Header from "../components/common/Header";
-import Description from "../components/Questionnaire/Description";
-import SelectionButton from "../components/Questionnaire/SelectionButton";
-import NextButton from "../components/Questionnaire/NextButton";
+import Description from "../components/Description/Description";
+import SelectionButton from "../components/Buttons/SelectionButton";
+import NextButton from "../components/Buttons/NextButton";
 import Footer from "../components/common/Footer";
 
 const Questionnaire = () => {

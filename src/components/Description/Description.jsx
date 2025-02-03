@@ -1,4 +1,4 @@
-import "../..//styles/questionnaire/Description.css";
+import "../..//styles/description/Description.css";
 
 const Description = () => {
     return (

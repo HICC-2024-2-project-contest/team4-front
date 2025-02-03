@@ -7,7 +7,7 @@ const StartButton = () =>{
     const navigate = useNavigate();
 
     return(
-    <div className="ButtonContainer">
+    <div className="StartButtonContainer">
         <Button text="시작하기" type="black" onClick={() => { 
           console.log("✅ 시작하기 버튼 클릭됨!"); 
           navigate("/questionnaire");

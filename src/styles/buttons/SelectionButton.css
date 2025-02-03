@@ -25,7 +25,7 @@
     width: 90px !important;
     height: 110px !important;
     border: none;
-    background-color: #f0f0f0;
+    background-color: #ffffff;
     color: #aaa;
     font-size: 14px;
     font-weight: bold;
@@ -69,4 +69,10 @@
   .SelectionButton.selected {
     background-color: #000 !important;
     color: #fff !important;
+  }
+
+  .SelectionButton.GenderSelected {
+    color: #000 !important;
+    background-color: #fff !important;
+    fill : black !important;
   }

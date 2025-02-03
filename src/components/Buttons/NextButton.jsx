@@ -1,17 +1,17 @@
-import Button from "../../components/common/Button";
+import Button from "../common/Button";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "../../components/contexts/UserContext";
-import "../../styles/questionnaire/NextButton.css";
+import { useUser } from "../contexts/UserContext";
+import "../../styles/buttons/NextButton.css";
 
 const NextButton = () => {
     const navigate = useNavigate();
     const { userData, setUserData } = useUser(); 
 
     return (
-        <div className="Buttoncontainer">
+        <div className="NextButtonContainer">
         <Button 
         text="다음" 
-        type="black" 
+        type={userData.gender && userData.relationship ? "black" : "white"} 
         onClick={() => { 
         console.log("✅ 다음 버튼 클릭됨!"); 
         navigate("/gift_theme_Selection");
