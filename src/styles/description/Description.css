@@ -1,0 +1,35 @@
+.Title {
+    position: relative;  /* 절대값 대신 상대값 */
+    width: 215px;
+    height: 29px;
+    margin: 20px auto 10px; /* 상단 여백 확보 */
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #1D1D1D;
+  }
+  
+  /* 설명 (선택하신 정보로 선물 추천) */
+  .Description {
+    position: relative;  /* 절대값 대신 상대값 */
+    width: auto;
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: #1D1D1D;
+    
+    white-space: nowrap; /* 한 줄로 유지 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 필요 시 말줄임표(...) 처리 */
+    margin-bottom: 20px; /* 다음 요소와 간격 */
+  }
+  
+  .DescriptionMent{
+    padding-top: 88px;
+  }
