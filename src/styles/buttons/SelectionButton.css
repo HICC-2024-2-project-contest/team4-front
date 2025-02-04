@@ -1,8 +1,8 @@
 /* 📌 선택 그룹 */
-.SelectionGroup {
+  .SelectionGroup {
     display: flex;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     flex-direction: column; /* 세로 정렬 */
     align-items: center;
     align-content: center;
