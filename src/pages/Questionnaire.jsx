@@ -2,7 +2,7 @@ import Header from "../components/common/Header";
 import Description from "../components/Description/Description";
 import SelectionButton from "../components/Buttons/SelectionButton";
 import NextButton from "../components/Buttons/NextButton";
-import Footer from "../components/common/Footer";
+
 
 const Questionnaire = () => {
  
@@ -12,7 +12,6 @@ const Questionnaire = () => {
       <Description />
       <SelectionButton />
       <NextButton />
-      <Footer />
     </div>
   );
 };

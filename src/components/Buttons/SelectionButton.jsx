@@ -1,5 +1,5 @@
-  import MaleIcon from "../icons/male_icon.svg";
-  import FemaleIcon from "../icons/female_icon.svg";
+  import MaleIcon from "../../assets/icons/male_icon.svg";
+  import FemaleIcon from "../../assets/icons/female_icon.svg";
   import { useUser } from "../contexts/UserContext";
   import "../../styles/buttons/SelectionButton.css";
 

@@ -2,7 +2,6 @@ import Header from "../components/common/Header";
 import ThemeDescription from "../components/Description/ThemeDescription";
 import ThemeSelectButton from "../components/Buttons/ThemeSelectButton";
 import ThemeNextButton from "../components/Buttons/ThemeNextButton";
-import Footer from "../components/common/Footer";
 
 const GiftThemeSelection = () => {
   console.log("✅ Questionnaire 화면 렌더링됨!"); 
@@ -12,7 +11,6 @@ const GiftThemeSelection = () => {
         <ThemeDescription />
         <ThemeSelectButton />
         <ThemeNextButton />
-        <Footer />
     </div>
   );
 };

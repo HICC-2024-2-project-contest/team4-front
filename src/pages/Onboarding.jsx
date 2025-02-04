@@ -1,7 +1,7 @@
 import Header from "../components/common/Header";
 import SlideImage from "../components/onboarding/SlideImage"
 import StartButton from "../components/onboarding/StartButton";
-import Footer from "../components/common/Footer";
+
 
 
 const Onboarding = () => {
@@ -10,7 +10,6 @@ const Onboarding = () => {
       <Header />
       <SlideImage />
       <StartButton />
-      <Footer />
       
     </div>
   );
