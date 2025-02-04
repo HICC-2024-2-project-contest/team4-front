@@ -1,3 +1,10 @@
+.gift-theme-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 화면 전체 높이 */
+}
+
 .gift-theme-container {
   display: flex;
   flex-direction: column;
@@ -45,21 +52,11 @@
   border-color: #D9D9D9;
 }
 
-/* LeftRibbon 스타일 */
-.ribbon.left {
+.ribbon {
   position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 60px;
-  height: 60px;
-  z-index: 5; /* 버튼보다 아래에 두고 싶다면 조절 */
-}
-
-/* RightRibbon 스타일 */
-.ribbon.right {
-  position: absolute;
-  top: -20px;
-  right: -20px;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 60px;
   height: 60px;
   z-index: 5;

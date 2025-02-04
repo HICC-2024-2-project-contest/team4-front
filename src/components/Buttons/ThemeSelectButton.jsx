@@ -8,6 +8,7 @@ const ThemeSelectButton = () => {
   const themes = ["생일", "기념일", "집들이", "감사", "축하", "시즌별"];
 
   return (
+    <div className="gift-theme-wrapper">
     <div className="gift-theme-container">
       <img src={LeftRibbon} alt="Left Ribbon" className="ribbon left" />
       <img src={RightRibbon} alt="Right Ribbon" className="ribbon right" />
@@ -35,6 +36,7 @@ const ThemeSelectButton = () => {
           </button>
         ))}
       </div>
+    </div>
     </div>
   );
 };
