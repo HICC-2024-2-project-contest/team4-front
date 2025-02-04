@@ -1,5 +1,7 @@
 import { useUser } from "../../components/contexts/UserContext";
 import "../../styles/buttons/ThemeSelectButton.css";
+import LeftRibbon from "../../assets/icons/ribbon_left.svg";
+import RightRibbon from "../../assets/icons/ribbon_right.svg";
 
 const ThemeSelectButton = () => {
   const { userData, setUserData } = useUser();
@@ -7,7 +9,11 @@ const ThemeSelectButton = () => {
 
   return (
     <div className="gift-theme-container">
-      <div className="gift-theme-row">
+      <img src={LeftRibbon} alt="Left Ribbon" className="ribbon left" />
+      <img src={RightRibbon} alt="Right Ribbon" className="ribbon right" />
+
+    
+    <div className="gift-theme-row">
         {themes.slice(0, 3).map((item) => (
           <button
             key={item}
