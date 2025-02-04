@@ -10,7 +10,7 @@ const GiftThemeSelection = () => {
         <Header />
         <ThemeDescription />
         <ThemeSelectButton />
-        <ThemeNextButton />
+        <ThemeNextButton />   {/* 윤서님 페이지로 */}
     </div>
   );
 };
