@@ -10,7 +10,6 @@ const Onboarding = () => {
       <Header />
       <SlideImage />
       <StartButton />
-      
     </div>
   );
 };
