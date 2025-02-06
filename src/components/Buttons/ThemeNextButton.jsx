@@ -14,7 +14,7 @@ const NextButton = () => {
         type={userData.theme ?  "black" : "white"}
         onClick={() => { 
         console.log("✅ 다음 버튼 클릭됨!");
-        navigate("/kakao_talk1");
+        navigate("/kakao_talk1");  /*여기서 윤서님 페이지로 넘어갑니다!*/
         }} 
         disabled={!userData.theme}
         />

@@ -1,5 +1,6 @@
     .NextButtonContainer {
         position: relative;
+        margin-top: 150px;
         margin-bottom: 25px;
         display: flex;
         justify-content: center;

@@ -1,8 +1,8 @@
 .Title {
     position: relative;  /* 절대값 대신 상대값 */
-    width: 215px;
+    width: 230px;
     height: 29px;
-    margin: 20px auto 10px; /* 상단 여백 확보 */
+    margin: 20px auto 30px; /* 상단 여백 확보 */
     font-family: 'Pretendard';
     font-weight: 600;
     font-size: 22px;
@@ -27,7 +27,7 @@
     white-space: nowrap; /* 한 줄로 유지 */
     overflow: hidden;
     text-overflow: ellipsis; /* 필요 시 말줄임표(...) 처리 */
-    margin-bottom: 20px; /* 다음 요소와 간격 */
+    margin-bottom: 60px; /* 다음 요소와 간격 */
   }
   
   .DescriptionMent{
