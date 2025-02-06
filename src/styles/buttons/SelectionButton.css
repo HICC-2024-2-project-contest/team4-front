@@ -1,8 +1,8 @@
 /* 📌 선택 그룹 */
-.SelectionGroup {
+  .SelectionGroup {
     display: flex;
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     flex-direction: column; /* 세로 정렬 */
     align-items: center;
     align-content: center;
@@ -74,5 +74,7 @@
   .SelectionButton.GenderSelected {
     color: #000 !important;
     background-color: #fff !important;
-    fill : black !important;
+  }
+  .SelectionButton.GenderSelected img {
+    filter: brightness(0) invert(0); /* 검정색으로 변경 */
   }
