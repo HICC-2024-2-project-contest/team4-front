@@ -1,6 +1,6 @@
   import MaleIcon from "../../assets/icons/male_icon.svg";
   import FemaleIcon from "../../assets/icons/female_icon.svg";
-  import { useUser } from "../contexts/UserContext";
+  import useUser from "../../hooks/UseUser";
   import "../../styles/buttons/SelectionButton.css";
 
   const SelectionButton = () => {

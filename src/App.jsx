@@ -1,8 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { UserProvider } from "./components/contexts/UserContext";
-
-import Header from "./components/common/Header";
+import UserProvider from "./components/contexts/UserProvider"
 import Onboarding from "./pages/Onboarding";
 import Questionnaire from "./pages/Questionnaire";
 import GiftThemeSelection from "./pages/GiftThemeSelection";

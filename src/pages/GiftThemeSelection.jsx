@@ -2,7 +2,7 @@ import Header from "../components/common/Header";
 import ThemeDescription from "../components/Description/ThemeDescription";
 import ThemeSelectButton from "../components/Buttons/ThemeSelectButton";
 import ThemeNextButton from "../components/Buttons/ThemeNextButton";
-import { useUser } from "../components/contexts/UserContext";
+import useUser from "../hooks/UseUser";
 
 const GiftThemeSelection = () => {
   console.log("✅ Questionnaire 화면 렌더링됨!"); 
