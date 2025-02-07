@@ -1,6 +1,6 @@
 import Button from "../common/Button";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "../contexts/UserContext";
+import useUser from "../../hooks/UseUser";
 import "../../styles/buttons/NextButton.css";
 
 const NextButton = () => {
