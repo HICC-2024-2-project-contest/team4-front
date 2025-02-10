@@ -1,0 +1,47 @@
+.AgreePopup {
+  position: fixed;
+  background: white;
+  padding: 20px;
+  width: 320px;
+  height: 590px;
+  top: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.AgreePopup h2 {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.AgreePopup h3 {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.AgreePopup p {
+  font-size: 10px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.AgreePopup .Button {
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  bottom: 15px;
+}
+
+.AgreePopup .Button_gray {
+  left: 10px;
+}
+
+.AgreePopup .Button_white {
+  right: 10px;
+}
