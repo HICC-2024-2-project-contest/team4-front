@@ -7,7 +7,7 @@ const MoveShopping = ({ img, title, link, onClose }) => {
   };
 
   return (
-    <div className="blackBox">
+    <div className="grayBox">
       <div className="MoveShopping">
         <h6 onClick={onClose}>X</h6>
         <div className="image_title">
