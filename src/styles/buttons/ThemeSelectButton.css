@@ -26,6 +26,7 @@
   gap: 6px;
   width: 246px;
   height: 78px;
+  z-index: 2;
 }
 
 .gift-theme-item {
@@ -65,7 +66,7 @@
   justify-content: center;
   width: 100px; /* 리본 크기에 맞게 조정 */
   height: 50px;
-  z-index: 5;
+  z-index: 1;
 }
 
 .ribbon-left {

@@ -2,7 +2,7 @@ import Header from "../components/common/Header";
 import Agree from "../components/kakao/Agree";
 import Ment from "../components/kakao/ment";
 import SpeechBubble from "../components/kakao/SpeechBubble";
-import { useUser } from "../components/contexts/UserContext";
+import useUser from "../hooks/UseUser";
 
 const KakaoTalkAgree = () => {
 

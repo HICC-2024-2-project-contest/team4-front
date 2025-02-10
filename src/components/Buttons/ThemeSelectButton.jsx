@@ -1,4 +1,4 @@
-import { useUser } from "../../components/contexts/UserContext";
+import useUser from "../../hooks/UseUser";
 import "../../styles/buttons/ThemeSelectButton.css";
 import LeftRibbon from "../../assets/icons/ribbon_left.svg";
 import RightRibbon from "../../assets/icons/ribbon_right.svg";
