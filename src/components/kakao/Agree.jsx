@@ -13,7 +13,9 @@ const Agree = () => {
           type="checkbox"
           checked={checked}
           onChange={() => setChecked(!checked)}
+          id="agreeCheckbox"
         />
+        <label htmlFor="agreeCheckbox"></label>
         <h6 className="whiteMent">개인정보 수집 및 이용 동의</h6>
         <p>약관 동의하고 파일 업로드 하기</p>
         <Button

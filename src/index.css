@@ -29,6 +29,7 @@ body {
 @font-face {
   font-family: "NotoSansKR";
   src: url("/NotoSansKR-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
@@ -39,6 +40,11 @@ body {
 @font-face {
   font-family: "Roboto";
   src: url("/Roboto-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/Montserrat-VariableFont_wght.ttf");
 }
 
 body * {

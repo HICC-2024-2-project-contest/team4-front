@@ -21,7 +21,25 @@
   cursor: pointer;
 }
 
-.Agree input:checked::after {
+.blackBox #agreeCheckbox {
+  background-color: #8a8a8a;
+}
+
+.blackBox #agreeCheckbox:checked {
+  background-color: #ffffff;
+}
+
+.Agree label {
+  content: url("../../assets/img_kakao/notCheck.svg");
+  position: absolute;
+  width: 32px;
+  height: 25px;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Agree input[type="checkbox"]:checked + label {
   content: url("../../assets/img_kakao/check.svg");
   position: absolute;
   width: 32px;

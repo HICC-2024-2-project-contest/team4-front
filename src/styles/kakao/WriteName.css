@@ -9,6 +9,10 @@
   border: none;
 }
 
+.WriteName input:focus {
+  outline: none;
+}
+
 .WriteName h6 {
   /* 이름 입력 */
   width: 47px;
@@ -22,4 +26,41 @@
 
   width: 162px;
   height: 15px;
+}
+
+@media (max-width: 768px) {
+  .mobileFocus {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 100vw;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.7) 100%
+    );
+    display: flex;
+    justify-content: center; /* 수평 중앙 */
+  }
+
+  .mobileFocus input {
+    margin-top: 90px;
+    width: 240px;
+    height: 48px;
+
+    border: none;
+    background: none;
+
+    text-align: center; /* 텍스트 수평 중앙 정렬 */
+    line-height: 48px; /* 텍스트 수직 중앙 정렬 (input의 높이와 맞추기) */
+
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  .mobileFocus input:focus {
+    outline: none;
+  }
 }
