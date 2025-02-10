@@ -18,3 +18,11 @@
 
   color: #343434;
 }
+
+.Ment_result {
+  overflow: hidden;
+}
+.Ment_result h3 {
+  position: fixed;
+  width: 360px;
+}
