@@ -1,11 +1,10 @@
 .Loading {
   background-color: #ffffff;
   width: 360px;
-  height: 400px;
+  height: 100%;
   position: fixed;
-  margin-top: 40px;
+  top: 70px;
   padding-top: 70px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -50,4 +49,15 @@
 
   color: #1d1d1d;
   padding-top: 12px;
+}
+
+.Loading .ground {
+  height: 237px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.Loading .character {
+  position: absolute;
+  bottom: 233px;
 }
