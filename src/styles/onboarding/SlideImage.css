@@ -3,7 +3,7 @@
     width: 360px !important;
     max-width: 360px !important;
     height: 451px !important;
-    background-color: #D9D9D9 !important;
+    overflow: hidden;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -16,3 +16,9 @@
     width: 100% !important;
     max-width: 360px !important;
   }
+
+  .swiper-slide img {
+    width: 100% !important;  /* 가로를 꽉 채움 */
+    height: 100% !important; /* 세로를 꽉 채움 */
+    object-fit: cover;       /* 비율을 유지하면서 꽉 채움 */
+}
