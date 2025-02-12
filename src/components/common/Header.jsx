@@ -9,7 +9,8 @@ const Header = () => {
       <img
         src={logo}
         alt="프레젠톡 로고"
-        onClick={() => {
+        onClick={(e) => {
+          e.stopPropagation();
           nav("/");
         }}
       />

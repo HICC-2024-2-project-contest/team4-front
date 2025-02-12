@@ -5,6 +5,7 @@
   padding-top: 37px;
   width: 360px;
   height: 88px;
+  z-index: 1001; /*겹치는 문제 해결 */
 }
 
 .Header img {
