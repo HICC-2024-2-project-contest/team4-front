@@ -20,35 +20,82 @@ const Inventory = () => {
   const [lastItems, setLastItems] = useState({});
   const [page, setPage] = useState({});
 
-  // 초기 데이터 불러오기
+  // userData 변하면 API 호출, 똑같으면 sessionStorage
   const getInventory = useCallback(async () => {
-    const formData = new FormData();
-    formData.append("file", userData.file);
+    const savedUserData = sessionStorage.getItem("userData");
+    const savedInventory = sessionStorage.getItem("inventory");
 
-    try {
-      const queryString = new URLSearchParams({
-        targetName: userData.name,
-        relation: userData.relationship,
-        sex: userData.gender,
-        theme: userData.theme,
-      }).toString();
-
-      const response = await axios.post(
-        `https://app.presentalk.store/api/gpt/process?${queryString}`,
-        formData,
-        { headers: { Accept: "application/json" } }
-      );
-      setInventory(response.data || []);
-      const uniqueCategories = [
-        ...new Set(response.data.map((item) => item.keyword)),
-      ];
-      setCategories(uniqueCategories);
-      if (uniqueCategories.length > 0) {
-        setSelectedCategory(uniqueCategories[0]);
+    if (!userData || Object.values(userData).every((value) => value === null)) {
+      // userData가 없으면 세션에서 가져오기
+      if (savedInventory) {
+        const parsedInventory = JSON.parse(savedInventory);
+        setInventory(parsedInventory);
+        const uniqueCategories = [
+          ...new Set(parsedInventory.map((item) => item.keyword)),
+        ];
+        setCategories(uniqueCategories);
+        if (uniqueCategories.length > 0) {
+          setSelectedCategory(uniqueCategories[0]);
+        }
+        setLoading(false);
       }
-      setLoading(false);
-    } catch (error) {
-      console.log("선물 리스트 받아오기 실패", error);
+    } else {
+      // userData가 있고, savedUserData와 같으면 savedInventory를 사용
+      if (
+        savedUserData &&
+        JSON.parse(savedUserData).name === userData.name &&
+        JSON.parse(savedUserData).changed === userData.changed
+      ) {
+        if (savedInventory) {
+          const parsedInventory = JSON.parse(savedInventory);
+          setInventory(parsedInventory);
+          const uniqueCategories = [
+            ...new Set(parsedInventory.map((item) => item.keyword)),
+          ];
+          setCategories(uniqueCategories);
+          if (uniqueCategories.length > 0) {
+            setSelectedCategory(uniqueCategories[0]);
+          }
+          setLoading(false);
+        }
+      } else {
+        // userData가 있고, savedUserData와 다르면 API 호출
+        const formData = new FormData();
+        formData.append("file", userData.file);
+
+        try {
+          const queryString = new URLSearchParams({
+            targetName: userData.name,
+            relation: userData.relationship,
+            sex: userData.gender,
+            theme: userData.theme,
+          }).toString();
+
+          const response = await axios.post(
+            `https://app.presentalk.store/api/gpt/process?${queryString}`,
+            formData,
+            { headers: { Accept: "application/json" } }
+          );
+          const inventoryData = response.data || [];
+          setInventory(inventoryData);
+
+          // sessionStorage에 저장
+
+          sessionStorage.setItem("userData", JSON.stringify(userData));
+          sessionStorage.setItem("inventory", JSON.stringify(inventoryData));
+
+          const uniqueCategories = [
+            ...new Set(response.data.map((item) => item.keyword)),
+          ];
+          setCategories(uniqueCategories);
+          if (uniqueCategories.length > 0) {
+            setSelectedCategory(uniqueCategories[0]);
+          }
+          setLoading(false);
+        } catch (error) {
+          console.log("선물 리스트 받아오기 실패", error);
+        }
+      }
     }
   }, [userData]);
 
@@ -56,7 +103,28 @@ const Inventory = () => {
     getInventory();
   }, [getInventory]);
 
-  // 아이템 로딩(20개씩)
+  // 처음에만
+  const loadFirstItems = useCallback(() => {
+    const filteredInventory = inventory.filter(
+      (item) => item.keyword === selectedCategory
+    );
+
+    // currentItems[selectedCategory]가 없으면 처음 20개 로드
+    if (!currentItems[selectedCategory]) {
+      const newItems = filteredInventory.slice(0, 20); // 처음 20개만 로드
+
+      setCurrentItems((prevItems) => ({
+        ...prevItems,
+        [selectedCategory]: newItems, // 해당 카테고리 아이템만 새로 업데이트
+      }));
+      setPage((prevPage) => ({
+        ...prevPage,
+        [selectedCategory]: 1, // 페이지 초기화
+      }));
+    }
+  }, [inventory, selectedCategory, currentItems]);
+
+  // 재분석 시 아이템 로드
   const loadNextItems = useCallback(() => {
     const filteredInventory = inventory.filter(
       (item) => item.keyword === selectedCategory
@@ -83,33 +151,31 @@ const Inventory = () => {
 
   // 스크롤 처리
   useEffect(() => {
-    const handleScroll = () => {
+    const checkAndAttachListener = () => {
       if (inventoryItemRef.current) {
-        if (inventoryItemRef.current.scrollTop > 0) {
-          setIsScrolled(true);
-        } else {
-          setIsScrolled(false);
-        }
+        const handleScroll = () => {
+          setIsScrolled(inventoryItemRef.current.scrollTop > 0);
+        };
+
+        inventoryItemRef.current.addEventListener("scroll", handleScroll);
+        handleScroll(); // 초기 실행
+
+        return () => {
+          inventoryItemRef.current?.removeEventListener("scroll", handleScroll);
+        };
+      } else {
+        setTimeout(checkAndAttachListener, 100); // 0.1초 후 다시 확인
       }
     };
 
-    const inventoryItem = inventoryItemRef.current;
-    if (inventoryItem) {
-      inventoryItem.addEventListener("scroll", handleScroll);
-    }
-
-    return () => {
-      if (inventoryItem) {
-        inventoryItem.removeEventListener("scroll", handleScroll);
-      }
-    };
+    checkAndAttachListener();
   }, []);
 
   useEffect(() => {
     if (selectedCategory) {
-      setCurrentItems([]);
+      loadFirstItems();
     }
-  }, [selectedCategory]);
+  }, [selectedCategory, loadFirstItems]);
 
   useEffect(() => {
     if (selectedCategory && !currentItems[selectedCategory]) {
