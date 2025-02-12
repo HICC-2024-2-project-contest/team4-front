@@ -27,7 +27,7 @@ const Card = ({ inventory }) => {
           }}
         />
         <div className="text">
-          <h6>{inventory.title}</h6>
+          <h6 dangerouslySetInnerHTML={{ __html: inventory.title }} />
           <h5>{inventory.price.toLocaleString()}원</h5>
         </div>
       </div>

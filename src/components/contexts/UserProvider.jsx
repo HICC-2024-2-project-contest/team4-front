@@ -5,7 +5,9 @@ const UserProvider = ({ children }) => {
   const [userData, setUserData] = useState({
     gender: null,
     relationship: null,
-    theme: null
+    theme: null,
+    file: null,
+    name: null,
   });
 
   return (

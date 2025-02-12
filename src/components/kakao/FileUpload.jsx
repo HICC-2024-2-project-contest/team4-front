@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useUser from "../../hooks/UseUser";
 import Button from "../common/Button";
 import { useNavigate } from "react-router-dom";
 import "../../styles/kakao/FileUpload.css";
@@ -6,6 +7,7 @@ import arrow from "../../assets/img_kakao/arrow.svg";
 import check from "../../assets/img_kakao/check.svg";
 
 const FileUpload = () => {
+  const { userData, setUserData } = useUser();
   const nav = useNavigate();
   const [file, setFile] = useState(null);
   const [stage, setStage] = useState("initial");
@@ -31,9 +33,7 @@ const FileUpload = () => {
       return;
     }
 
-    const formData = new FormData();
-    formData.append("file", file);
-    console.log(file);
+    setUserData((prev) => ({ ...prev, file: file }));
     nav("/kakao_talk3");
   };
 
