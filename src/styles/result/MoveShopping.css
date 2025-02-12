@@ -12,7 +12,7 @@
 .MoveShopping {
   position: fixed;
   width: 320px;
-  height: 294px;
+  height: 334px;
   left: 50%;
   transform: translateX(-50%);
   top: 200px;
@@ -67,6 +67,6 @@
   width: 296px;
   height: 53px;
   left: calc(50% - 296px / 2);
-  top: 229px;
+  top: 259px;
   margin: 0;
 }

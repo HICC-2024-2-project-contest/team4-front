@@ -20,35 +20,60 @@ const Inventory = () => {
   const [lastItems, setLastItems] = useState({});
   const [page, setPage] = useState({});
 
-  // 초기 데이터 불러오기
+  // userData 변하면 API 호출, 똑같으면 sessionStorage
   const getInventory = useCallback(async () => {
-    const formData = new FormData();
-    formData.append("file", userData.file);
+    const savedInventory = sessionStorage.getItem("inventory"); //세션 스토리지에 저장
 
-    try {
-      const queryString = new URLSearchParams({
-        targetName: userData.name,
-        relation: userData.relationship,
-        sex: userData.gender,
-        theme: userData.theme,
-      }).toString();
-
-      const response = await axios.post(
-        `https://app.presentalk.store/api/gpt/process?${queryString}`,
-        formData,
-        { headers: { Accept: "application/json" } }
-      );
-      setInventory(response.data || []);
+    if (
+      savedInventory &&
+      userData &&
+      typeof userData === "object" &&
+      !Object.prototype.hasOwnProperty.call(userData, "changed")
+    ) {
+      const parsedInventory = JSON.parse(savedInventory);
+      setInventory(parsedInventory);
       const uniqueCategories = [
-        ...new Set(response.data.map((item) => item.keyword)),
+        ...new Set(parsedInventory.map((item) => item.keyword)),
       ];
       setCategories(uniqueCategories);
       if (uniqueCategories.length > 0) {
         setSelectedCategory(uniqueCategories[0]);
       }
       setLoading(false);
-    } catch (error) {
-      console.log("선물 리스트 받아오기 실패", error);
+    } else {
+      const formData = new FormData();
+      formData.append("file", userData.file);
+
+      try {
+        const queryString = new URLSearchParams({
+          targetName: userData.name,
+          relation: userData.relationship,
+          sex: userData.gender,
+          theme: userData.theme,
+        }).toString();
+
+        const response = await axios.post(
+          `https://app.presentalk.store/api/gpt/process?${queryString}`,
+          formData,
+          { headers: { Accept: "application/json" } }
+        );
+        const inventoryData = response.data || [];
+        setInventory(inventoryData);
+
+        // sessionStorage에 저장
+        sessionStorage.setItem("inventory", JSON.stringify(inventoryData));
+
+        const uniqueCategories = [
+          ...new Set(response.data.map((item) => item.keyword)),
+        ];
+        setCategories(uniqueCategories);
+        if (uniqueCategories.length > 0) {
+          setSelectedCategory(uniqueCategories[0]);
+        }
+        setLoading(false);
+      } catch (error) {
+        console.log("선물 리스트 받아오기 실패", error);
+      }
     }
   }, [userData]);
 

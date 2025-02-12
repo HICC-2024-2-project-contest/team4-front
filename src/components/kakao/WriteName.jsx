@@ -29,7 +29,7 @@ const WriteName = () => {
   useEffect(() => {
     if (focus && inputRef.current) {
       inputRef.current.focus();
-      console.log(inputRef.current);
+      // console.log(inputRef.current);
     }
   }, [focus]);
 
@@ -83,7 +83,7 @@ const WriteName = () => {
             onChange={(e) => setName(e.target.value)}
             onBlur={() => {
               setFocus(false);
-              console.log("focus 해제", focus);
+              // console.log("focus 해제", focus);
             }}
             onKeyDown={handleKeyDown}
             ref={inputRef}

@@ -12,7 +12,7 @@ const MoveShopping = ({ img, title, link, onClose }) => {
         <h6 onClick={onClose}>X</h6>
         <div className="image_title">
           <img src={img} alt="제품 이미지" />
-          <p>{title}</p>
+          <p dangerouslySetInnerHTML={{ __html: title }}></p>
         </div>
         <Button text={"스토어로 이동"} type={"white"} onClick={clickCard} />
       </div>
