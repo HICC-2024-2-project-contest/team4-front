@@ -83,26 +83,24 @@ const Inventory = () => {
 
   // 스크롤 처리
   useEffect(() => {
-    const handleScroll = () => {
+    const checkAndAttachListener = () => {
       if (inventoryItemRef.current) {
-        if (inventoryItemRef.current.scrollTop > 0) {
-          setIsScrolled(true);
-        } else {
-          setIsScrolled(false);
-        }
+        const handleScroll = () => {
+          setIsScrolled(inventoryItemRef.current.scrollTop > 0);
+        };
+
+        inventoryItemRef.current.addEventListener("scroll", handleScroll);
+        handleScroll(); // 초기 실행
+
+        return () => {
+          inventoryItemRef.current?.removeEventListener("scroll", handleScroll);
+        };
+      } else {
+        setTimeout(checkAndAttachListener, 100); // 0.1초 후 다시 확인
       }
     };
 
-    const inventoryItem = inventoryItemRef.current;
-    if (inventoryItem) {
-      inventoryItem.addEventListener("scroll", handleScroll);
-    }
-
-    return () => {
-      if (inventoryItem) {
-        inventoryItem.removeEventListener("scroll", handleScroll);
-      }
-    };
+    checkAndAttachListener();
   }, []);
 
   useEffect(() => {
