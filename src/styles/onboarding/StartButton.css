@@ -1,7 +1,6 @@
 /* 버튼 컨테이너 */
 .StartButtonContainer {
-    margin-top: 60px;
-    margin-bottom: 0px; /* 버튼 아래 여백도 조정 */
-    display: flex;
-    justify-content: center;
-  }
+  margin: 0 20px;
+  position: absolute;
+  bottom: 60px;
+}

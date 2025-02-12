@@ -1,10 +1,12 @@
 import { useState, useEffect, useRef } from "react";
+import useUser from "../../hooks/UseUser";
 import Button from "../common/Button";
 import { useNavigate } from "react-router-dom";
 import "../../styles/kakao/WriteName.css";
 
 const WriteName = () => {
   const nav = useNavigate();
+  const { userData, setUserData } = useUser();
   const [name, setName] = useState("");
   const [focus, setFocus] = useState(false);
   const [mobile, setMobile] = useState(false);
@@ -65,6 +67,7 @@ const WriteName = () => {
                   alert("이름을 입력해주세요!"); // 빈 값이면 경고창 띄우기
                   return;
                 }
+                setUserData((prev) => ({ ...prev, name: name }));
                 nav("/result"); // 값이 있을 때만 이동
               }}
               disabled={name.trim() === ""} // 빈 값이면 버튼 비활성화
