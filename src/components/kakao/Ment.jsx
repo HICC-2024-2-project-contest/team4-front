@@ -3,7 +3,10 @@ import "../../styles/kakao/Ment.css";
 const Ment = () => {
   return (
     <div className="Ment">
-      <h3>상대와의 카카오톡 대화를 업로드해 보세요!</h3>
+      <h3>
+        움직이는 대화 상자를
+        <br /> 클릭해 도움을 받아보세요!
+      </h3>
     </div>
   );
 };

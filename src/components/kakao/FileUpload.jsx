@@ -60,7 +60,7 @@ const FileUpload = () => {
         )}
 
         <h6>파일 업로드</h6>
-        <p>움직이는 대화 상자를 클릭해 도움을 받아보세요!</p>
+        <p>상대와의 카카오톡 대화를 업로드해 보세요!</p>
         <Button
           text={"다음"}
           type={file !== null ? "white" : "gray"}

@@ -52,7 +52,8 @@
 .blackBox h6 {
   /* 개인정보 수집 및 이용 동의 */
 
-  width: 133px;
+  display: block;
+  width: 250px;
   height: 20px;
   margin: 0 auto;
   margin-top: 15px;
@@ -62,30 +63,17 @@
   letter-spacing: -0.02em;
   text-decoration-line: underline;
   color: #ffffff;
-}
-
-.blackBox h6 {
-  /* 개인정보 수집 및 이용 동의 */
-
-  width: 133px;
-  height: 20px;
-  margin: 0 auto;
-  margin-top: 15px;
-  font-size: 13px;
-  line-height: 150%;
-  /* identical to box height, or 20px */
-  letter-spacing: -0.02em;
-  text-decoration-line: underline;
-  color: #ffffff;
+  text-align: center;
 }
 
 .blackBox p {
   /* 약관 동의하고 파일 업로드 하기 */
 
-  width: 120px;
+  width: 300px;
   height: 15px;
   margin: 0 auto;
   margin-top: 9px;
+  text-align: center;
 
   font-family: "Pretendard";
   font-style: normal;
@@ -113,7 +101,6 @@
   .Agree label {
     top: 23%;
   }
-
   .Agree input[type="checkbox"]:checked + label {
     top: 23%;
   }

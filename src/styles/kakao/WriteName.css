@@ -15,7 +15,8 @@
 
 .WriteName h6 {
   /* 이름 입력 */
-  width: 47px;
+  width: 300px;
+  text-align: center;
   height: 20px;
   text-decoration: none;
   margin-top: 32px;
@@ -24,8 +25,9 @@
 .WriteName p {
   /* 마지막으로 상대방의 이름을 입력해주세요! */
 
-  width: 162px;
+  width: 302px;
   height: 15px;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
