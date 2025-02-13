@@ -102,3 +102,19 @@
   position: absolute;
   bottom: 60px;
 }
+
+@media (max-height: 640px) {
+  .blackBox .Button {
+    bottom: 40px;
+  }
+  .blackBox {
+    height: 249px;
+  }
+  .Agree label {
+    top: 23%;
+  }
+
+  .Agree input[type="checkbox"]:checked + label {
+    top: 23%;
+  }
+}

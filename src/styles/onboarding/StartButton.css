@@ -4,3 +4,9 @@
   position: absolute;
   bottom: 60px;
 }
+
+@media (max-height: 640px) {
+  .StartButtonContainer {
+    bottom: 40px;
+  }
+}

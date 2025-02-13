@@ -1,24 +1,33 @@
 /* Swiper 슬라이드 스타일 */
 .swiper-slide {
-    width: 360px !important;
-    max-width: 360px !important;
-    height: 451px !important;
-    overflow: hidden;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin-top: 95px !important;
-    margin-bottom: 60px;
-  }
-  
-  /* Swiper 래퍼 */
-  .swiper-wrapper {
-    width: 100% !important;
-    max-width: 360px !important;
-  }
+  width: 360px !important;
+  max-width: 360px !important;
+  height: 451px;
+  overflow: hidden;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  /* margin-top: 95px !important; */
+  margin-bottom: 60px;
+  position: relative;
+  top: 95px;
+}
 
-  .swiper-slide img {
-    width: 100% !important;  /* 가로를 꽉 채움 */
-    height: 100% !important; /* 세로를 꽉 채움 */
-    object-fit: cover;       /* 비율을 유지하면서 꽉 채움 */
+/* Swiper 래퍼 */
+.swiper-wrapper {
+  width: 100% !important;
+  max-width: 360px !important;
+}
+
+.swiper-slide img {
+  width: 100% !important; /* 가로를 꽉 채움 */
+  height: 100% !important; /* 세로를 꽉 채움 */
+  object-fit: cover; /* 비율을 유지하면서 꽉 채움 */
+}
+
+@media (max-height: 640px) {
+  .swiper-slide {
+    top: 45px;
+    height: 350px;
+  }
 }

@@ -61,3 +61,21 @@
   position: absolute;
   bottom: 233px;
 }
+
+@media (max-height: 620px) {
+  .Loading {
+    top: 30px;
+  }
+  .Loading h5 {
+    padding-bottom: 40px;
+  }
+  .Loading p {
+    padding-top: 5px;
+  }
+  .Loading .ground {
+    bottom: -80px;
+  }
+  .Loading .character {
+    bottom: 153px;
+  }
+}

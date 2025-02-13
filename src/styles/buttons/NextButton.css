@@ -1,7 +1,11 @@
-    .NextButtonContainer {
-        position: relative;
-        margin-top: 150px;
-        margin-bottom: 25px;
-        display: flex;
-        justify-content: center;
-      }
+.NextButtonContainer {
+  margin: 0 20px;
+  position: absolute;
+  bottom: 60px;
+}
+
+@media (max-height: 640px) {
+  .NextButtonContainer {
+    bottom: 40px;
+  }
+}

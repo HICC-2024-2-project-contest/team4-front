@@ -4,7 +4,7 @@
   width: 212px;
   height: 56px;
   position: relative;
-  top: 109px;
+  top: 90px;
 
   margin: 0 auto;
   margin-top: 0px;
@@ -25,4 +25,11 @@
 .Ment_result h3 {
   position: fixed;
   width: 360px;
+}
+
+@media (max-height: 622px) {
+  .Ment h3 {
+    font-size: 12px;
+    top: 80px;
+  }
 }

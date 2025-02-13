@@ -3,7 +3,7 @@
   width: 300px;
   height: 230px;
   position: relative;
-  top: 140px;
+  top: 110px;
 }
 
 .SpeechBubble .bubble {
@@ -92,18 +92,32 @@
     transform: rotate(0deg); /* 시작은 정자세 */
   }
   25% {
-    transform: rotate(-2deg); /* 왼쪽으로 50도 회전 */
+    transform: rotate(-4deg); /* 왼쪽으로 50도 회전 */
   }
   50% {
     transform: rotate(0deg); /* 다시 정자세로 돌아옴 */
   }
   75% {
-    transform: rotate(2deg); /* 오른쪽으로 50도 회전 */
+    transform: rotate(4deg); /* 오른쪽으로 50도 회전 */
   }
   100% {
     transform: rotate(0deg); /* 다시 정자세로 돌아옴 */
   }
 }
 .bubble4 {
-  animation: bubble-ani 1s linear infinite; /* 애니메이션 적용 */
+  animation: bubble-ani 0.7s linear infinite; /* 애니메이션 적용 */
+}
+
+@media (max-height: 680px) {
+  .SpeechBubble {
+    transform: scale(0.8);
+    top: 70px;
+  }
+}
+
+@media (max-height: 620px) {
+  .SpeechBubble {
+    transform: scale(0.7);
+    top: 10px;
+  }
 }

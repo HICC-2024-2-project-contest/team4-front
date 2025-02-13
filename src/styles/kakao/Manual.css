@@ -14,6 +14,7 @@
   border-radius: 20px;
   border-bottom-right-radius: 0;
   margin-left: 20px;
+  z-index: 1001;
 }
 
 .Manual .bigBubble:after {
@@ -108,4 +109,29 @@
   display: flex;
   flex-direction: column;
   padding: 5px;
+}
+
+@media (max-height: 720px) {
+  .Manual .bigBubble {
+    transform: scale(0.9);
+    margin: 80px auto;
+  }
+}
+@media (max-height: 670px) {
+  .Manual .bigBubble {
+    transform: scale(0.8);
+    margin: 70px auto;
+  }
+}
+@media (max-height: 622px) {
+  .Manual .bigBubble {
+    transform: scale(0.7);
+    margin: 10px auto;
+  }
+}
+@media (max-height: 540px) {
+  .Manual .bigBubble {
+    transform: scale(0.65);
+    margin: 0px auto;
+  }
 }

@@ -1,35 +1,46 @@
 .Title {
-    position: relative;  /* 절대값 대신 상대값 */
-    width: 230px;
-    height: 29px;
-    margin: 20px auto 30px; /* 상단 여백 확보 */
-    font-family: 'Pretendard';
-    font-weight: 600;
-    font-size: 22px;
-    line-height: 29px;
-    text-align: center;
-    letter-spacing: -0.02em;
-    color: #1D1D1D;
+  position: relative; /* 절대값 대신 상대값 */
+  top: 0px;
+  width: 230px;
+  height: 29px;
+  margin: 20px auto 30px; /* 상단 여백 확보 */
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #1d1d1d;
+}
+
+/* 설명 (선택하신 정보로 선물 추천) */
+.Description {
+  position: relative; /* 절대값 대신 상대값 */
+  top: 0px;
+  width: auto;
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #1d1d1d;
+
+  white-space: nowrap; /* 한 줄로 유지 */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 필요 시 말줄임표(...) 처리 */
+  margin-bottom: 60px; /* 다음 요소와 간격 */
+}
+
+.DescriptionMent {
+  padding-top: 88px;
+}
+
+@media (max-height: 640px) {
+  .Title {
+    top: -20px;
   }
-  
-  /* 설명 (선택하신 정보로 선물 추천) */
   .Description {
-    position: relative;  /* 절대값 대신 상대값 */
-    width: auto;
-    font-family: 'Pretendard';
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 15px;
-    text-align: center;
-    letter-spacing: -0.02em;
-    color: #1D1D1D;
-    
-    white-space: nowrap; /* 한 줄로 유지 */
-    overflow: hidden;
-    text-overflow: ellipsis; /* 필요 시 말줄임표(...) 처리 */
-    margin-bottom: 60px; /* 다음 요소와 간격 */
+    top: -20px;
   }
-  
-  .DescriptionMent{
-    padding-top: 88px;
-  }
+}
