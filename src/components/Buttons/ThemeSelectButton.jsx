@@ -5,14 +5,14 @@ import RightRibbon from "../../assets/icons/ribbon_right.svg";
 
 const ThemeSelectButton = () => {
   const { userData, setUserData } = useUser();
-  const themes = ["생일", "기념일", "집들이", "감사", "축하", "시즌별"];
+  const themes = ["생일", "기념일", "집들이", "감사", "축하", "발렌타인데이"];
   const themeMapping = {
     생일: "birthday",
     기념일: "anniversary",
     집들이: "housewarming",
     감사: "thanks",
     축하: "congratulations",
-    시즌별: "valentine",
+    발렌타인데이: "valentine",
   };
 
   return (
@@ -34,7 +34,15 @@ const ThemeSelectButton = () => {
                 setUserData((prev) => ({ ...prev, theme: themeMapping[item] }))
               }
             >
-              {item}
+              {item === "발렌타인데이" ? (
+                <>
+                  발렌타인
+                  <br />
+                  데이
+                </>
+              ) : (
+                item
+              )}
             </button>
           ))}
         </div>
@@ -43,11 +51,21 @@ const ThemeSelectButton = () => {
             <button
               key={item}
               className={`gift-theme-item ${
-                userData.theme === item ? "active" : "inactive"
+                userData.theme === themeMapping[item] ? "active" : "inactive"
               }`}
-              onClick={() => setUserData((prev) => ({ ...prev, theme: item }))}
+              onClick={() =>
+                setUserData((prev) => ({ ...prev, theme: themeMapping[item] }))
+              }
             >
-              {item}
+              {item === "발렌타인데이" ? (
+                <>
+                  발렌타인
+                  <br />
+                  데이
+                </>
+              ) : (
+                item
+              )}
             </button>
           ))}
         </div>

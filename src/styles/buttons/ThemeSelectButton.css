@@ -44,6 +44,9 @@
   color: #ffffff;
   cursor: pointer;
   background: #d9d9d9;
+  white-space: pre-line; /* 줄바꿈 적용 */
+  text-align: center; /* 중앙 정렬 */
+  line-height: 1.2; /* 줄 간격 조절 */
 }
 
 .gift-theme-item.active {
