@@ -1,6 +1,6 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import UserProvider from "./components/contexts/UserProvider"
+import UserProvider from "./components/contexts/UserProvider";
 import Onboarding from "./pages/Onboarding";
 import Questionnaire from "./pages/Questionnaire";
 import GiftThemeSelection from "./pages/GiftThemeSelection";
@@ -9,9 +9,8 @@ import KakaoTalkUpload from "./pages/KakaoTalkUpload";
 import KakaoTalkName from "./pages/KakaoTalkName";
 import Result from "./pages/Result";
 
-
 function App() {
-  console.log("✅ App 컴포넌트 렌더링됨!");
+  // console.log("✅ App 컴포넌트 렌더링됨!");
   return (
     <UserProvider>
       <div className="AppContainer">
@@ -19,7 +18,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Onboarding />} />
             <Route path="/questionnaire" element={<Questionnaire />} />
-            <Route path="/gift_theme_Selection" element={<GiftThemeSelection />} />
+            <Route
+              path="/gift_theme_Selection"
+              element={<GiftThemeSelection />}
+            />
             <Route path="/kakao_talk1" element={<KakaoTalkAgree />} />
             <Route path="/kakao_talk2" element={<KakaoTalkUpload />} />
             <Route path="/kakao_talk3" element={<KakaoTalkName />} />

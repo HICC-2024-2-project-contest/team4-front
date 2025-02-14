@@ -59,7 +59,7 @@ const FileUpload = () => {
           </div>
         )}
 
-        <h6>파일 업로드</h6>
+        <h6>TXT 파일 업로드</h6>
         <p>상대와의 카카오톡 대화를 업로드해 보세요!</p>
         <Button
           text={"다음"}

@@ -4,22 +4,26 @@ import useUser from "../../hooks/UseUser";
 import "../../styles/buttons/NextButton.css";
 
 const NextButton = () => {
-    const navigate = useNavigate();
-    const { userData, setUserData } = useUser(); 
+  const navigate = useNavigate();
+  const { userData, setUserData } = useUser();
 
-    return (
-        <div className="NextButtonContainer ">
-        <Button 
-        text="다음" 
-        type={userData.theme ?  "black" : "white"}
-        onClick={() => { 
-        console.log("✅ 다음 버튼 클릭됨!");
-        navigate("/kakao_talk1");  /*여기서 윤서님 페이지로 넘어갑니다!*/
-        }} 
+  return (
+    <div className="NextButtonContainer ">
+      <Button
+        text="다음"
+        type={userData.theme ? "black" : "white"}
+        onClick={() => {
+          //   console.log("✅ 다음 버튼 클릭됨!");
+          if (!userData.theme) {
+            alert("선물 테마를 선택해주세요!");
+            return;
+          }
+          navigate("/kakao_talk1"); /*여기서 윤서님 페이지로 넘어갑니다!*/
+        }}
         disabled={!userData.theme}
-        />
-        </div>
-    );
+      />
+    </div>
+  );
 };
 
 export default NextButton;
