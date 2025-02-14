@@ -64,7 +64,7 @@ const Card = ({ inventory }) => {
       </div>
       {click && (
         <MoveShopping
-          img={inventory.image}
+          img={changedImage}
           title={inventory.title}
           link={inventory.link}
           onClose={onCloseEvent}
