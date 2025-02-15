@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef, useCallback } from "react";
+import Ment2 from "./Ment2";
 import useUser from "../../hooks/UseUser";
 import Category from "./Category";
 import Card from "./Card";
@@ -19,17 +20,35 @@ const Inventory = () => {
   const inventoryItemRef = useRef(null);
   const [lastItems, setLastItems] = useState({});
   const [page, setPage] = useState({});
+  const [reasons, setReasons] = useState([]);
+  const [testReason, setTestReason] = useState([
+    {
+      keyword: "핸드크림",
+      reason: "대화 내용에 따라 향수 선물이 적절할 것이라는 근거...",
+    },
+    {
+      keyword: "립밤",
+      reason: "대중교통 이용 언급 등으로 무선 이어폰이 필요할 것이라는 근거...",
+    },
+    {
+      keyword: "머플러",
+      reason: "감성적 표현에 기반하여 목걸이가 적합하다는 근거...",
+    },
+  ]);
 
   // userData 변하면 API 호출, 똑같으면 sessionStorage
   const getInventory = useCallback(async () => {
     const savedUserData = sessionStorage.getItem("userData");
     const savedInventory = sessionStorage.getItem("inventory");
+    const savedReason = sessionStorage.getItem("reason");
 
     if (!userData || Object.values(userData).every((value) => value === null)) {
       // userData가 없으면 세션에서 가져오기
       if (savedInventory) {
         const parsedInventory = JSON.parse(savedInventory);
         setInventory(parsedInventory);
+        const parsedReason = savedReason ? JSON.parse(savedReason) : [];
+        setReasons(parsedReason);
         const uniqueCategories = [
           ...new Set(parsedInventory.map((item) => item.keyword)),
         ];
@@ -49,6 +68,8 @@ const Inventory = () => {
         if (savedInventory) {
           const parsedInventory = JSON.parse(savedInventory);
           setInventory(parsedInventory);
+          const parsedReason = JSON.parse(savedReason);
+          setReasons(parsedReason);
           const uniqueCategories = [
             ...new Set(parsedInventory.map((item) => item.keyword)),
           ];
@@ -76,22 +97,26 @@ const Inventory = () => {
             formData,
             { headers: { Accept: "application/json" } }
           );
-          const inventoryData = response.data || [];
+          const inventoryData = response.data.product || [];
+          const reasonData = response.data.reason || [];
           setInventory(inventoryData);
+          setReasons(reasonData);
 
           // sessionStorage에 저장
 
           sessionStorage.setItem("userData", JSON.stringify(userData));
           sessionStorage.setItem("inventory", JSON.stringify(inventoryData));
+          sessionStorage.setItem("reason", JSON.stringify(reasonData));
 
           const uniqueCategories = [
-            ...new Set(response.data.map((item) => item.keyword)),
+            ...new Set(response.data.product.map((item) => item.keyword)),
           ];
           setCategories(uniqueCategories);
           if (uniqueCategories.length > 0) {
             setSelectedCategory(uniqueCategories[0]);
           }
           setLoading(false);
+          // console.log(response.data);
         } catch (error) {
           console.log("선물 리스트 받아오기 실패", error);
         }
@@ -188,35 +213,49 @@ const Inventory = () => {
     return <Loading />;
   }
 
-  return (
-    <div className="Inventory">
-      <div className="Inventory_category">
-        {categories.map((category, index) => (
-          <Category
-            key={index}
-            text={category}
-            type={selectedCategory === category ? "black" : "gray"}
-            onClick={() => setSelectedCategory(category)}
-          />
-        ))}
-      </div>
-      <div className="Inventory_item" ref={inventoryItemRef}>
-        {(currentItems[selectedCategory] || []).map((item) => (
-          <Card key={item.id} inventory={item} />
-        ))}
+  {
+    console.log(reasons);
+    console.log(inventory);
+  }
 
-        {isScrolled ? (
-          <IoIosArrowDropupCircle
-            className="up"
-            onClick={() => (inventoryItemRef.current.scrollTop = 0)}
-          />
-        ) : (
-          !lastItems[selectedCategory] && (
-            <IoReloadCircleSharp className="reload" onClick={loadNextItems} />
-          )
-        )}
+  return (
+    <>
+      {reasons.some((item) => item.keyword === selectedCategory) ? (
+        reasons
+          .filter((item) => item.keyword === selectedCategory)
+          .map((item, index) => <Ment2 content={item.reason} key={index} />)
+      ) : (
+        <Ment2 content="소중한 상대방을 위해 이런 선물은 어떠세요?" />
+      )}
+      <div className="Inventory">
+        <div className="Inventory_category">
+          {categories.map((category, index) => (
+            <Category
+              key={index}
+              text={category}
+              type={selectedCategory === category ? "black" : "gray"}
+              onClick={() => setSelectedCategory(category)}
+            />
+          ))}
+        </div>
+        <div className="Inventory_item" ref={inventoryItemRef}>
+          {(currentItems[selectedCategory] || []).map((item) => (
+            <Card key={item.id} inventory={item} />
+          ))}
+
+          {isScrolled ? (
+            <IoIosArrowDropupCircle
+              className="up"
+              onClick={() => (inventoryItemRef.current.scrollTop = 0)}
+            />
+          ) : (
+            !lastItems[selectedCategory] && (
+              <IoReloadCircleSharp className="reload" onClick={loadNextItems} />
+            )
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -7,7 +7,7 @@ const Result = () => {
   return (
     <div className="Result">
       <Header />
-      <Ment2 />
+      {/* <Ment2 /> */}
       <Inventory />
     </div>
   );
