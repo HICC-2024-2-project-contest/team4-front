@@ -116,7 +116,6 @@ const Inventory = () => {
             setSelectedCategory(uniqueCategories[0]);
           }
           setLoading(false);
-          // console.log(response.data);
         } catch (error) {
           console.log("선물 리스트 받아오기 실패", error);
         }
@@ -213,10 +212,10 @@ const Inventory = () => {
     return <Loading />;
   }
 
-  {
-    console.log(reasons);
-    console.log(inventory);
-  }
+  // {
+  //   console.log(reasons);
+  //   console.log(inventory);
+  // }
 
   return (
     <>
