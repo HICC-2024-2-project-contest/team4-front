@@ -1,0 +1,39 @@
+.Ment h3 {
+  /* 상대와의 카카오톡 대화를 업로드해 보세요! */
+
+  width: 302px;
+  height: 56px;
+  position: relative;
+  top: 90px;
+
+  margin: 0 auto;
+  margin-top: 0px;
+
+  font-weight: 600;
+  font-size: 21.6797px;
+  line-height: 130%;
+  /* or 28px */
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #343434;
+}
+
+.Ment_result {
+  overflow: hidden;
+}
+.Ment_result h3 {
+  position: fixed;
+  top: 75px;
+  width: 300px;
+  text-align: center;
+  left: 30px;
+  font-size: 14.5px;
+}
+
+@media (max-height: 622px) {
+  .Ment h3 {
+    font-size: 10px;
+    top: 70px;
+  }
+}

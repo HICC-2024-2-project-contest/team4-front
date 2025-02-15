@@ -1,0 +1,95 @@
+.gift-theme-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.gift-theme-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 246px;
+  height: 162px;
+  margin-top: 50px;
+  margin-bottom: 6px;
+  position: relative; /* 리본의 absolute 배치를 위해 추가 */
+}
+
+.gift-theme-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  width: 246px;
+  height: 78px;
+  z-index: 2;
+}
+
+.gift-theme-item {
+  width: 78px;
+  height: 78px;
+  border: 0.72px solid #d9d9d9;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Ria Sans", sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  cursor: pointer;
+  background: #d9d9d9;
+  white-space: pre-line; /* 줄바꿈 적용 */
+  text-align: center; /* 중앙 정렬 */
+  line-height: 1.2; /* 줄 간격 조절 */
+}
+
+.gift-theme-item.active {
+  background: #1d1d1d;
+  border-color: #1d1d1d;
+}
+
+.gift-theme-item.inactive {
+  background: #d9d9d9;
+  border-color: #d9d9d9;
+}
+
+.ribbon-wrapper {
+  position: absolute;
+  top: -50px; /* 선물상자 위에 자연스럽게 위치 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px; /* 리본 크기에 맞게 조정 */
+  height: 50px;
+  z-index: 1;
+}
+
+.ribbon-left {
+  position: absolute;
+  top: 0;
+  left: -5px; /* 선물 상자 기준 왼쪽으로 */
+  width: 61px;
+  height: 61px;
+}
+
+.ribbon-right {
+  position: absolute;
+  top: 0;
+  right: -5px; /* 선물 상자 기준 오른쪽으로 */
+  width: 61px;
+  height: 61px;
+}
+
+@media (max-height: 640px) {
+  .gift-theme-wrapper {
+    top: -70px;
+  }
+}

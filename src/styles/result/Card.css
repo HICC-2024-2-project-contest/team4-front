@@ -1,0 +1,54 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8.65px;
+
+  width: 159.95px;
+  height: 270.14px;
+}
+
+.Card img {
+  width: 159.95px;
+  height: 161.51px;
+}
+
+.Card .text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 4.81px;
+
+  width: 154.78px;
+  height: 49.98px;
+}
+
+.Card .text h6 {
+  /* CommentCommentCommentCommentComment. */
+
+  width: 154.78px;
+  height: 80.03px;
+
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 11.5361px;
+  line-height: 14px;
+
+  color: #000000;
+}
+
+.Card .text h5 {
+  /* 30,000원 */
+
+  width: 140.91px;
+  height: 16.3px;
+
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 14.4202px;
+  line-height: 17px;
+
+  color: #000000;
+}

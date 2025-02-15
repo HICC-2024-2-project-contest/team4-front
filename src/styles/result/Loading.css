@@ -1,0 +1,81 @@
+.Loading {
+  background-color: #ffffff;
+  width: 360px;
+  height: 100%;
+  position: fixed;
+  top: 70px;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Loading h5 {
+  /* 선물 고르는 중 ... */
+
+  width: 301px;
+  height: 28px;
+  font-weight: 600;
+  font-size: 21.6797px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #1d1d1d;
+  padding-bottom: 60px;
+}
+
+.Loading h6 {
+  /* TIP */
+
+  width: 30px;
+  height: 18px;
+  font-family: "Ria Sans";
+  font-weight: 800;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #1d1d1d;
+}
+
+.Loading p {
+  /* 상대방에게 감정을 전달할 수 있는 선물을 골라보세요! */
+
+  width: 179px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 140%;
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #1d1d1d;
+  padding-top: 12px;
+}
+
+.Loading .ground {
+  height: 237px;
+  position: absolute;
+  bottom: 0px;
+}
+
+.Loading .character {
+  position: absolute;
+  bottom: 233px;
+}
+
+@media (max-height: 620px) {
+  .Loading {
+    top: 30px;
+  }
+  .Loading h5 {
+    padding-bottom: 40px;
+  }
+  .Loading p {
+    padding-top: 5px;
+  }
+  .Loading .ground {
+    bottom: -80px;
+  }
+  .Loading .character {
+    bottom: 153px;
+  }
+}

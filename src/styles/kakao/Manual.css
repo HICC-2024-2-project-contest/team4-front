@@ -1,0 +1,137 @@
+.Manual .bigBubble {
+  position: relative;
+  margin: 120px auto;
+  padding: 20px 0;
+  background-color: #080808;
+  width: 320px;
+  height: 250px;
+  font-size: 12px;
+  line-height: 134%;
+  display: flex;
+  flex-wrap: wrap;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  margin-left: 20px;
+  z-index: 1001;
+}
+
+.Manual .bigBubble:after {
+  content: "";
+  position: absolute;
+  top: 96%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom: 0;
+  margin-top: -10px;
+  right: -6%;
+  border-left-color: #080808;
+  border-right: 0;
+}
+
+.Manual .bigBubble h6 {
+  /* 카카오톡 대화창의 상단 오른쪽 서랍을 선택해주세요! */
+
+  height: 46px;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 160%;
+  text-align: right;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+.Manual .bigBubble .first h6 {
+  width: 131px;
+}
+
+.Manual .bigBubble .second h6 {
+  width: 113px;
+}
+
+.Manual .bigBubble .third h6 {
+  width: 116px;
+}
+
+.Manual .bigBubble .fourth h6 {
+  width: 140px;
+}
+
+.Manual .bigBubble .number {
+  width: 14px;
+  height: 14px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 100%;
+  margin-top: 2px;
+
+  font-weight: 700;
+  font-size: 11.0629px;
+  display: flex;
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  color: #080808;
+}
+
+.Manual .ment {
+  display: flex;
+  gap: 0px;
+}
+
+.Manual .bigBubble img {
+  width: 120px;
+  margin-left: 23px;
+}
+
+.Manual .bigBubble .fourth img {
+  margin-top: 10.5px;
+}
+
+.Manual .bigBubble .second .number {
+  margin-left: 10px;
+}
+
+.Manual .bigBubble .third .number {
+  margin-left: 14px;
+}
+
+.Manual .bigBubble .fourth .number {
+  margin-right: -25px;
+  margin-left: 13px;
+}
+
+.Manual .first,
+.Manual .second,
+.Manual .third,
+.Manual .fourth {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+@media (max-height: 720px) {
+  .Manual .bigBubble {
+    transform: scale(0.9);
+    margin: 80px auto;
+  }
+}
+@media (max-height: 670px) {
+  .Manual .bigBubble {
+    transform: scale(0.8);
+    margin: 70px auto;
+  }
+}
+@media (max-height: 622px) {
+  .Manual .bigBubble {
+    transform: scale(0.7);
+    margin: 10px auto;
+  }
+}
+@media (max-height: 540px) {
+  .Manual .bigBubble {
+    transform: scale(0.65);
+    margin: 0px auto;
+  }
+}

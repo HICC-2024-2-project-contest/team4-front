@@ -1,0 +1,27 @@
+.Button {
+  width: 320px;
+  height: 53px;
+
+  border: 2.89062px solid #000000;
+  border-radius: 11.1px;
+
+  font-family: "NotoSansKR";
+  font-weight: 800;
+  font-size: 17.3438px;
+  line-height: 160%;
+}
+
+.Button_black {
+  background-color: #343434;
+  color: #ffffff;
+}
+
+.Button_white {
+  background-color: #ffffff;
+  color: #343434;
+}
+
+.Button_gray {
+  background-color: #6e6e6e;
+  color: #1d1d1d;
+}

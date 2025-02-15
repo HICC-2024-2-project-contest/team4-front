@@ -1,0 +1,22 @@
+.Category {
+  width: 101.89px;
+  height: 49.14px;
+  border-radius: 5.78125px;
+
+  font-family: "Ria Sans";
+  font-weight: 800;
+  font-size: 12.8px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  border: none;
+}
+
+.Category_black {
+  background-color: #1d1d1d;
+  color: #ffffff;
+}
+
+.Category_gray {
+  background-color: #d6d6d6;
+  color: #1d1d1d;
+}

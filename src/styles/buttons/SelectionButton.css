@@ -1,0 +1,88 @@
+/* 📌 선택 그룹 */
+.SelectionGroup {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 📌 버튼 그룹 */
+.ButtonGroup {
+  display: flex;
+  justify-content: center; /* 버튼 중앙 정렬 */
+  gap: 10px;
+  margin: auto auto;
+}
+
+/* 📌 성별 버튼 */
+.SelectionButton.gender {
+  width: 90px !important;
+  height: 110px !important;
+  border: none;
+  background-color: #ffffff;
+  color: #aaa;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 📌 관계 버튼 */
+.SelectionButton.relationship {
+  box-sizing: border-box;
+  background: #d9d9d9;
+  border: 0.722656px solid #d9d9d9;
+  border-radius: 3px;
+  width: 78px !important;
+  height: 78px !important;
+  border: none;
+  background-color: #d9d9d9;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Ria Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 13px;
+  line-height: 134%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+}
+
+/* 📌 선택된 버튼 스타일 */
+.SelectionButton.selected {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.SelectionButton.GenderSelected {
+  color: #000 !important;
+  background-color: #fff !important;
+}
+.SelectionButton.GenderSelected img {
+  filter: brightness(0) invert(0); /* 검정색으로 변경 */
+}
+
+@media (max-height: 640px) {
+  .SelectionGroup {
+    top: -70px;
+  }
+}

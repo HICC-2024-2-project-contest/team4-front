@@ -1,0 +1,23 @@
+/*app.css*/
+.AppContainer {
+  width: 1440px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  max-width: 360px;
+  width: 100%;
+  max-height: 740px;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 노트북 웹 버전. 원활한 개발 위해 일단 주석 처리. 모바일웹 버전 하면서 확인용 */
+@media (min-width: 760px) {
+  .App {
+    transform: scale(1.3);
+  }
+}
